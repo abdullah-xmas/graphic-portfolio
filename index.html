@@ -428,23 +428,23 @@
     .fade-left{left:0;background:linear-gradient(90deg, rgba(7,11,22,1) 0%, rgba(7,11,22,0) 100%)}
     .fade-right{right:0;background:linear-gradient(270deg, rgba(7,11,22,1) 0%, rgba(7,11,22,0) 100%)}
     .marquee{
-    overflow-x:auto;
-    overflow-y:hidden;
+    overflow:hidden;
     width:100%;
-    touch-action:pan-x pan-y;
-    scrollbar-width:none;
+    touch-action:pan-y;
     }
 
-    .marquee::-webkit-scrollbar{
-     display:none;
-    }
+   .marquee-track{
+   display:flex;
+   width:max-content;
+   gap:18px;
+   padding:6px 18px;
+   will-change:transform;
+   animation:scrollLeft 96s linear infinite;
+   }
 
-    .marquee-track{
-    display:flex;
-    width:max-content;
-    gap:18px;
-    padding:6px 18px;
-    }
+  .slider-shell:hover .marquee-track{
+  animation-play-state:paused;
+   }
 
     .thumb,
     .thumb-card,
@@ -1404,8 +1404,8 @@
 
       const sliderImages = validPortfolio.length ? validPortfolio : portfolioImages.slice(0, 8);
 
-      marqueeTrack.innerHTML = '';
-      sliderImages.forEach((path) => {
+     marqueeTrack.innerHTML = '';
+      [...sliderImages, ...sliderImages].forEach((path) => {
       marqueeTrack.appendChild(createThumb(path));
       });
 
