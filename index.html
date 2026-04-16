@@ -428,19 +428,25 @@
     .fade-left{left:0;background:linear-gradient(90deg, rgba(7,11,22,1) 0%, rgba(7,11,22,0) 100%)}
     .fade-right{right:0;background:linear-gradient(270deg, rgba(7,11,22,1) 0%, rgba(7,11,22,0) 100%)}
     .marquee{
-      overflow:hidden;
-      width:100%;
-      touch-action:pan-y;
+    overflow-x:auto;
+    overflow-y:hidden;
+    width:100%;
+    touch-action:pan-x pan-y;
+    scrollbar-width:none;
     }
+
+    .marquee::-webkit-scrollbar{
+     display:none;
+    }
+
     .marquee-track{
-      display:flex;
-      width:max-content;
-      gap:18px;
-      padding:6px 18px;
-      will-change:transform;
-      animation:scrollLeft 96s linear infinite;
+     display:flex;
+    width:max-content;
+    gap:18px;
+    padding:6px 18px;
+    will-change:auto;
+    animation:none;
     }
-    .slider-shell:hover .marquee-track{animation-play-state:paused}
 
     .thumb,
     .thumb-card,
@@ -1401,8 +1407,8 @@
       const sliderImages = validPortfolio.length ? validPortfolio : portfolioImages.slice(0, 8);
 
       marqueeTrack.innerHTML = '';
-      [...sliderImages, ...sliderImages].forEach((path) => {
-        marqueeTrack.appendChild(createThumb(path));
+      sliderImages.forEach((path) => {
+      marqueeTrack.appendChild(createThumb(path));
       });
 
       mainGrid.innerHTML = '';
