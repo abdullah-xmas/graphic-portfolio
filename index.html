@@ -36,21 +36,16 @@
       --bg-2:#07101d;
       --bg-3:#0b1220;
       --panel:rgba(255,255,255,.055);
-      --panel-2:rgba(255,255,255,.035);
       --line:rgba(255,255,255,.10);
+      --line-soft:rgba(255,255,255,.06);
       --line-strong:rgba(255,255,255,.16);
       --text:#f7fbff;
       --muted:#9eb0cf;
       --muted-2:#d7e5ff;
-      --accent:#8bdcff;
-      --accent-2:#8b5cf6;
       --shadow:0 28px 90px rgba(0,0,0,.34);
       --card-shadow:0 18px 50px rgba(0,0,0,.26);
       --max:1260px;
       --radius-xl:34px;
-      --radius-lg:26px;
-      --radius-md:20px;
-      --radius-sm:16px;
     }
 
     *{box-sizing:border-box;margin:0;padding:0}
@@ -94,11 +89,12 @@
     }
 
     img{
-      max-width:100%;
       display:block;
+      max-width:100%;
       image-rendering:auto;
       backface-visibility:hidden;
       -webkit-backface-visibility:hidden;
+      transform:translateZ(0);
     }
 
     .container{
@@ -144,14 +140,13 @@
       display:grid;place-items:center;
       background:linear-gradient(135deg, rgba(139,220,255,.95), rgba(139,92,246,.92));
       box-shadow:0 16px 34px rgba(139,220,255,.16);
-      flex:0 0 auto;
       overflow:hidden;
+      flex:0 0 auto;
     }
     .brand-mark img{
       width:100%;
       height:100%;
       object-fit:cover;
-      display:block;
     }
     .brand-text strong{
       display:block;
@@ -377,7 +372,6 @@
       line-height:1.08;
       text-wrap:balance;
     }
-
     .typing-cursor::after{
       content:"|";
       margin-left:4px;
@@ -427,11 +421,7 @@
     }
     .fade-left{left:0;background:linear-gradient(90deg, rgba(7,11,22,1) 0%, rgba(7,11,22,0) 100%)}
     .fade-right{right:0;background:linear-gradient(270deg, rgba(7,11,22,1) 0%, rgba(7,11,22,0) 100%)}
-    .marquee{
-      overflow:hidden;
-      width:100%;
-    }
-
+    .marquee{overflow:hidden;width:100%}
     .marquee-track{
       display:flex;
       width:max-content;
@@ -440,10 +430,7 @@
       will-change:transform;
       animation:scrollLeft 120s linear infinite;
     }
-
-    .slider-shell:hover .marquee-track{
-      animation-play-state:paused;
-    }
+    .slider-shell:hover .marquee-track{animation-play-state:paused}
 
     .thumb,
     .thumb-card,
@@ -454,7 +441,7 @@
     .faq-item,
     .contact-item{
       overflow:hidden;
-      border:1px solid rgba(255,255,255,.08);
+      border:1px solid var(--line-soft);
       background:rgba(255,255,255,.04);
       box-shadow:var(--card-shadow);
     }
@@ -477,6 +464,7 @@
       cursor:pointer;
       isolation:isolate;
     }
+
     .thumb img,
     .thumb-card img,
     .extra-card img{
@@ -485,13 +473,17 @@
       object-fit:cover;
       object-position:center;
       display:block;
-      transition:transform .35s ease;
+      filter:contrast(1.01) saturate(.97) brightness(.985);
+      transition:transform .35s ease, filter .35s ease;
     }
+
     .thumb-card:hover img,
     .extra-card:hover img,
     .thumb:hover img{
-      transform:scale(1.03);
+      transform:scale(1.01);
+      filter:contrast(1.01) saturate(.98) brightness(.99);
     }
+
     .thumb-card::before,
     .extra-card::before,
     .thumb::before{
@@ -502,6 +494,18 @@
       background:linear-gradient(180deg, rgba(255,255,255,.02), rgba(255,255,255,0));
       z-index:1;
     }
+
+    .thumb-card::after,
+    .extra-card::after,
+    .thumb::after{
+      content:"";
+      position:absolute;
+      inset:0;
+      background:linear-gradient(to bottom, rgba(255,255,255,.02), rgba(0,0,0,.06));
+      pointer-events:none;
+      z-index:1;
+    }
+
     .thumb-card:hover,
     .extra-card:hover,
     .ba-card:hover,
@@ -509,7 +513,7 @@
     .process-card:hover,
     .proof-card:hover,
     .faq-item:hover,
-    .contact-item:hover {
+    .contact-item:hover{
       border-color:var(--line-strong);
       box-shadow:0 24px 65px rgba(0,0,0,.30);
       transform:translateY(-4px);
@@ -517,17 +521,21 @@
 
     .main-grid,.ba-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
     .extra-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
-
-    .proof-grid{
+    .proof-grid,
+    .process-grid{
       display:grid;
       grid-template-columns:repeat(3,1fr);
       gap:18px;
     }
-    .proof-card{
+
+    .proof-card,
+    .process-card{
       padding:24px;
       border-radius:28px;
     }
-    .proof-icon{
+
+    .proof-icon,
+    .process-step{
       width:42px;
       height:42px;
       border-radius:14px;
@@ -535,15 +543,23 @@
       place-items:center;
       background:linear-gradient(135deg, rgba(139,220,255,.22), rgba(139,92,246,.22));
       border:1px solid var(--line);
-      font-size:18px;
       margin-bottom:14px;
     }
-    .proof-card h3{
+
+    .process-step{
+      border-radius:50%;
+      font-weight:800;
+      color:#fff;
+    }
+
+    .proof-card h3,
+    .process-card h3{
       font-size:1.06rem;
       letter-spacing:-.03em;
       margin-bottom:10px;
     }
-    .proof-card p{
+    .proof-card p,
+    .process-card p{
       color:var(--muted);
       font-size:.95rem;
     }
@@ -574,9 +590,7 @@
     .ba-base img,
     .ba-overlay img,
     .ba-divider,
-    .ba-handle{
-      pointer-events:none;
-    }
+    .ba-handle{pointer-events:none}
     .ba-card.is-dragging{cursor:grabbing}
     .ba-base,
     .ba-overlay,
@@ -626,38 +640,6 @@
       font-weight:800;
       box-shadow:0 12px 24px rgba(0,0,0,.22);
       z-index:3;
-      pointer-events:none;
-    }
-
-    .process-grid{
-      display:grid;
-      grid-template-columns:repeat(3,1fr);
-      gap:18px;
-    }
-    .process-card{
-      padding:24px;
-      border-radius:28px;
-    }
-    .process-step{
-      width:38px;
-      height:38px;
-      border-radius:50%;
-      display:grid;
-      place-items:center;
-      background:linear-gradient(135deg, rgba(139,220,255,.24), rgba(139,92,246,.24));
-      border:1px solid var(--line);
-      color:#fff;
-      font-weight:800;
-      margin-bottom:14px;
-    }
-    .process-card h3{
-      font-size:1.04rem;
-      margin-bottom:8px;
-      letter-spacing:-.03em;
-    }
-    .process-card p{
-      color:var(--muted);
-      font-size:.95rem;
     }
 
     .faq-clean .section-header{margin-bottom:40px}
@@ -916,12 +898,12 @@
   <div class="topbar">
     <div class="container">
       <nav class="nav glass">
-       <div class="brand">
-         <div class="brand-mark"><img src="Logo/1.webp" alt="Abdullah Thumbnails Logo"></div>
-         <div class="brand-text">
-         <strong>Abdullah Al Mamun</strong>
-          <span>Clean Thumbnails Built for Clicks</span>
-        </div>
+        <div class="brand">
+          <div class="brand-mark"><img src="Logo/1.webp" alt="Abdullah Thumbnails Logo"></div>
+          <div class="brand-text">
+            <strong>Abdullah Al Mamun</strong>
+            <span>Clean Thumbnails Built for Clicks</span>
+          </div>
         </div>
 
         <div class="nav-links">
@@ -930,9 +912,9 @@
           <a href="#before-after">Before / After</a>
           <a href="#faq">FAQ</a>
           <a href="#contact">Contact</a>
-      </div>
+        </div>
 
-      <a href="#contact" class="nav-cta">Get My Thumbnail</a>
+        <a href="#contact" class="nav-cta">Get My Thumbnail</a>
       </nav>
     </div>
   </div>
@@ -941,51 +923,50 @@
     <div class="container hero-grid">
       <div class="hero-copy reveal">
         <div class="eyebrow">Clean Design • Better Clicks • Fast Delivery</div>
-       <h1>Low views? <span>Your thumbnail is costing you clicks.</span></h1>
+        <h1>Low views? <span>Your thumbnail is costing you clicks.</span></h1>
 
-       <p>
-         Clean, high-impact thumbnails designed to stop scrolling and turn impressions into clicks.
-       </p>
+        <p>
+          Clean, high-impact thumbnails designed to stop scrolling and turn impressions into clicks.
+        </p>
 
-       <div class="hero-actions">
-       <a href="#portfolio" class="btn">See Results</a>
-       <a href="#contact" class="btn-outline">Get My Thumbnail</a>
-     </div>
+        <div class="hero-actions">
+          <a href="#portfolio" class="btn">See Results</a>
+          <a href="#contact" class="btn-outline">Get My Thumbnail</a>
+        </div>
 
-      <p style="margin-top:10px; color:var(--muted); font-size:.85rem;">
-      Trusted by creators to improve click performance and video visibility.
-      </p>
+        <p style="margin-top:10px; color:var(--muted); font-size:.85rem;">
+          Trusted by creators to improve click performance and video visibility.
+        </p>
 
-      <p style="margin-top:6px; color:var(--muted); font-size:.85rem;">
-      Focused on high CTR thumbnails for growing YouTube channels.
-      </p> 
-        
+        <p style="margin-top:6px; color:var(--muted); font-size:.85rem;">
+          Focused on high CTR thumbnails for growing YouTube channels.
+        </p>
 
-      <p style="margin-top:8px; color:var(--muted); font-size:.9rem;">
-      Quick response • Simple process • No hassle
-      </p>
-        
-       <div class="hero-points">
-        <div class="point">
-         <div>✦</div>
-        <div><strong>More Clicks</strong>Your video stops getting ignored and starts getting attention.</div>
-       </div>
+        <p style="margin-top:8px; color:var(--muted); font-size:.9rem;">
+          Quick response • Simple process • No hassle
+        </p>
 
-        <div class="point">
-         <div>✦</div>
-        <div><strong>Clean Look</strong>No messy design — just clear, strong visual impact.</div>
-       </div>
+        <div class="hero-points">
+          <div class="point">
+            <div>✦</div>
+            <div><strong>More Clicks</strong>Your video stops getting ignored and starts getting attention.</div>
+          </div>
 
-       <div class="point">
-        <div>✦</div>
-       <div><strong>Easy to Read</strong>Viewers understand your video in seconds.</div>
-       </div>
+          <div class="point">
+            <div>✦</div>
+            <div><strong>Clean Look</strong>No messy design — just clear, strong visual impact.</div>
+          </div>
 
-       <div class="point">
-        <div>✦</div>
-      <div><strong>Fast Delivery</strong>Get your thumbnail ready before upload time.</div>
-   </div>
-  </div>
+          <div class="point">
+            <div>✦</div>
+            <div><strong>Easy to Read</strong>Viewers understand your video in seconds.</div>
+          </div>
+
+          <div class="point">
+            <div>✦</div>
+            <div><strong>Fast Delivery</strong>Get your thumbnail ready before upload time.</div>
+          </div>
+        </div>
       </div>
 
       <div class="profile-card glass reveal">
@@ -1023,33 +1004,44 @@
       </div>
     </div>
   </section>
-  
+
+  <section id="featured">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-kicker">Featured Work</span>
+        <h2 class="section-title">Strong examples clients can see first</h2>
+        <p class="section-subtitle">A cleaner showcase of thumbnails designed to stand out and earn clicks.</p>
+      </div>
+      <div class="main-grid" id="mainGrid"></div>
+    </div>
+  </section>
+
   <section>
-  <div class="container">
-    <div class="section-header reveal">
-      <span class="section-kicker">Why creators choose this approach</span>
-      <h2 class="section-title">Stop losing clicks to weak thumbnails</h2>
-      <p class="section-subtitle">Designed to improve first impression, clarity, and click performance.</p>
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-kicker">Why creators choose this approach</span>
+        <h2 class="section-title">Stop losing clicks to weak thumbnails</h2>
+        <p class="section-subtitle">Designed to improve first impression, clarity, and click performance.</p>
+      </div>
+
+      <div class="proof-grid">
+        <article class="proof-card reveal">
+          <h3>“CTR improved after redesign”</h3>
+          <p>Thumbnail became clearer and more clickable — noticeable improvement in performance.</p>
+        </article>
+
+        <article class="proof-card reveal">
+          <h3>“Looks more professional now”</h3>
+          <p>The video feels higher quality before even clicking.</p>
+        </article>
+
+        <article class="proof-card reveal">
+          <h3>“Much better first impression”</h3>
+          <p>Viewers understand the content faster and are more likely to click.</p>
+        </article>
+      </div>
     </div>
-
-    <div class="proof-grid">
-      <article class="proof-card reveal">
-        <h3>“CTR improved after redesign”</h3>
-        <p>Thumbnail became clearer and more clickable — noticeable improvement in performance.</p>
-      </article>
-
-      <article class="proof-card reveal">
-        <h3>“Looks more professional now”</h3>
-        <p>The video feels higher quality before even clicking.</p>
-      </article>
-
-      <article class="proof-card reveal">
-        <h3>“Much better first impression”</h3>
-        <p>Viewers understand the content faster and are more likely to click.</p>
-      </article>
-    </div>
-  </div>
-</section>
+  </section>
 
   <section id="before-after">
     <div class="container">
@@ -1409,25 +1401,33 @@
 
       const sliderImages = validPortfolio.length ? validPortfolio : portfolioImages.slice(0, 8);
 
-      marqueeTrack.innerHTML = '';
-      [...sliderImages, ...sliderImages].forEach((path) => {
-        marqueeTrack.appendChild(createThumb(path));
-      });
+      if (marqueeTrack) {
+        marqueeTrack.innerHTML = '';
+        [...sliderImages, ...sliderImages].forEach((path) => {
+          marqueeTrack.appendChild(createThumb(path));
+        });
+      }
 
-      mainGrid.innerHTML = '';
-      (validPortfolio.length ? validPortfolio.slice(0, 6) : portfolioImages.slice(0, 6)).forEach((path) => {
-        mainGrid.appendChild(createCard(path, 'thumb-card'));
-      });
+      if (mainGrid) {
+        mainGrid.innerHTML = '';
+        (validPortfolio.length ? validPortfolio.slice(0, 6) : portfolioImages.slice(0, 6)).forEach((path) => {
+          mainGrid.appendChild(createCard(path, 'thumb-card'));
+        });
+      }
 
-      extraGrid.innerHTML = '';
-      (validPortfolio.length ? validPortfolio.slice(6, 34) : portfolioImages.slice(6, 33)).forEach((path) => {
-        extraGrid.appendChild(createCard(path, 'extra-card'));
-      });
+      if (extraGrid) {
+        extraGrid.innerHTML = '';
+        (validPortfolio.length ? validPortfolio.slice(6, 34) : portfolioImages.slice(6, 33)).forEach((path) => {
+          extraGrid.appendChild(createCard(path, 'extra-card'));
+        });
+      }
 
-      beforeAfterGrid.innerHTML = '';
-      const pairCount = Math.min(validBefore.length, validAfter.length);
-      for (let i = 0; i < pairCount; i++) {
-        beforeAfterGrid.appendChild(createBeforeAfterCard(validBefore[i], validAfter[i]));
+      if (beforeAfterGrid) {
+        beforeAfterGrid.innerHTML = '';
+        const pairCount = Math.min(validBefore.length, validAfter.length);
+        for (let i = 0; i < pairCount; i++) {
+          beforeAfterGrid.appendChild(createBeforeAfterCard(validBefore[i], validAfter[i]));
+        }
       }
 
       bindReveal();
@@ -1440,12 +1440,12 @@
       const el = document.getElementById('rotatingTitle');
       if (!el) return;
 
-     const texts = [
-       "Low clicks usually start with a weak thumbnail.",
-       "A better thumbnail can instantly improve your video performance.",
-      "More attention → more clicks → more growth.",
-      "Designed to stand out clearly — even on mobile screens."
-     ];
+      const texts = [
+        "Low clicks usually start with a weak thumbnail.",
+        "A better thumbnail can instantly improve your video performance.",
+        "More attention → more clicks → more growth.",
+        "Designed to stand out clearly — even on mobile screens."
+      ];
 
       let textIndex = 0;
       let charIndex = 0;
