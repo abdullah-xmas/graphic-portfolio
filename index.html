@@ -1,1990 +1,1855 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>YouTube Thumbnail Designer for High CTR</title>
-    <meta name="description" content="Premium YouTube thumbnail designer creating clean, high-CTR thumbnails that help videos look more clickable and more professional.">
-    <meta name="keywords" content="YouTube thumbnail designer, high CTR thumbnails, thumbnail design service, gaming thumbnails, AI thumbnails, professional YouTube thumbnails">
-    <meta name="author" content="Abdullah Al Mamun">
-    <meta name="robots" content="index, follow">
-    <link rel="canonical" href="https://abdullahthumbnails.xyz/">
-    <link rel="icon" type="image/png" sizes="48x48" href="favicon.png">
-    <link rel="shortcut icon" href="favicon.png">
-    <link rel="apple-touch-icon" href="favicon.png">
-    <meta property="og:title" content="High CTR YouTube Thumbnail Designer | Abdullah Thumbnails">
-    <meta property="og:description" content="Clean, premium YouTube thumbnails designed to improve first impression, clicks, and CTR.">
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://abdullahthumbnails.xyz/">
-    <meta property="og:image" content="https://abdullahthumbnails.xyz/intro_image/1.webp">
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="High CTR YouTube Thumbnail Designer | Abdullah Thumbnails">
-    <meta name="twitter:description" content="Premium thumbnail portfolio focused on clean visuals, stronger first impression, and better CTR.">
-    <meta name="twitter:image" content="https://abdullahthumbnails.xyz/intro_image/1.webp">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet">
+    <meta
+      name="description"
+      content="Premium YouTube thumbnail designer creating clean, high-CTR thumbnails that help videos look more clickable and more professional."
+    />
+    <meta
+      name="keywords"
+      content="YouTube thumbnail designer, high CTR thumbnails, thumbnail design service, gaming thumbnails, AI thumbnails, professional YouTube thumbnails"
+    />
+    <meta name="author" content="Abdullah Al Mamun" />
+    <meta name="robots" content="index, follow" />
+    <link rel="canonical" href="https://abdullahthumbnails.xyz/" />
+    <link rel="icon" type="image/png" sizes="48x48" href="favicon.png" />
+    <link rel="shortcut icon" href="favicon.png" />
+    <link rel="apple-touch-icon" href="favicon.png" />
+    <meta property="og:title" content="High CTR YouTube Thumbnail Designer | Abdullah Thumbnails" />
+    <meta
+      property="og:description"
+      content="Clean, premium YouTube thumbnails designed to improve first impression, clicks, and CTR."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://abdullahthumbnails.xyz/" />
+    <meta property="og:image" content="https://abdullahthumbnails.xyz/intro_image/1.webp" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="High CTR YouTube Thumbnail Designer | Abdullah Thumbnails" />
+    <meta
+      name="twitter:description"
+      content="Premium thumbnail portfolio focused on clean visuals, stronger first impression, and better CTR."
+    />
+    <meta name="twitter:image" content="https://abdullahthumbnails.xyz/intro_image/1.webp" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;display=swap"
+      rel="stylesheet"
+    />
     <style>
-        :root {
-            --bg-1: #040713;
-            --bg-2: #07101d;
-            --bg-3: #0b1220;
-            --panel: rgba(255, 255, 255, 0.055);
-            --line: rgba(255, 255, 255, 0.1);
-            --line-soft: rgba(255, 255, 255, 0.06);
-            --line-strong: rgba(255, 255, 255, 0.16);
-            --text: #f7fbff;
-            --muted: #9eb0cf;
-            --muted-2: #d7e5ff;
-            --shadow: 0 28px 90px rgba(0, 0, 0, 0.34);
-            --card-shadow: 0 18px 50px rgba(0, 0, 0, 0.26);
-            --max: 1260px;
-            --radius-xl: 34px;
-        }
+      :root {
+        --bg-1: #040713;
+        --bg-2: #07101d;
+        --bg-3: #0b1220;
+        --panel: rgba(255, 255, 255, 0.055);
+        --line: rgba(255, 255, 255, 0.1);
+        --line-soft: rgba(255, 255, 255, 0.06);
+        --line-strong: rgba(255, 255, 255, 0.16);
+        --text: #f7fbff;
+        --muted: #9eb0cf;
+        --muted-2: #d7e5ff;
+        --shadow: 0 28px 90px rgba(0, 0, 0, 0.34);
+        --card-shadow: 0 18px 50px rgba(0, 0, 0, 0.26);
+        --max: 1260px;
+        --radius-xl: 34px;
+      }
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+      html {
+        scroll-behavior: smooth;
+      }
+      body {
+        min-height: 100vh;
+        font-family: "Plus Jakarta Sans", system-ui, Arial, sans-serif;
+        color: var(--text);
+        background:
+          radial-gradient(circle at 12% 8%, rgba(139, 220, 255, 0.13), transparent 18%),
+          radial-gradient(circle at 88% 14%, rgba(139, 92, 246, 0.18), transparent 24%),
+          radial-gradient(circle at 50% 76%, rgba(59, 130, 246, 0.08), transparent 22%),
+          linear-gradient(180deg, var(--bg-1) 0%, var(--bg-2) 45%, var(--bg-1) 100%);
+        overflow-x: hidden;
+        line-height: 1.65;
+        -webkit-font-smoothing: antialiased;
+        text-rendering: optimizeLegibility;
+      }
+      body::before,
+      body::after {
+        content: "";
+        position: fixed;
+        width: 340px;
+        height: 340px;
+        border-radius: 50%;
+        pointer-events: none;
+        opacity: 0.16;
+        filter: blur(72px);
+        z-index: 0;
+      }
+      body::before {
+        top: -80px;
+        left: -90px;
+        background: linear-gradient(135deg, rgba(139, 220, 255, 0.85), transparent 45%);
+        animation: blobFloat 16s ease-in-out infinite;
+      }
+      body::after {
+        right: -110px;
+        bottom: -30px;
+        background: linear-gradient(135deg, rgba(139, 92, 246, 0.9), transparent 40%);
+        animation: blobFloat 20s ease-in-out infinite reverse;
+      }
+      img {
+        display: block;
+        max-width: 100%;
+        image-rendering: auto;
+        backface-visibility: hidden;
+        -webkit-backface-visibility: hidden;
+        transform: translateZ(0);
+      }
+      .container {
+        width: min(92%, var(--max));
+        margin: 0 auto;
+        position: relative;
+        z-index: 1;
+      }
+    .content-section{
+        content-visibility:auto;
+        contain-intrinsic-size:1px 900px;
+      }
+      .thumb,
+      .thumb-card,
+      .extra-card,
+      .ba-card,
+      .review-card,
+      .process-card,
+      .faq-item,
+      .contact-item{
+        contain:layout paint;
+      }
+      .glass {
+        background: linear-gradient(180deg, rgba(255, 255, 255, 0.065), rgba(255, 255, 255, 0.035));
+        border: 1px solid var(--line);
+        box-shadow: var(--shadow);
+        backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px);
+      }
+      .topbar {
+        position: sticky;
+        top: 14px;
+        z-index: 50;
+        padding-top: 18px;
+      }
+      .nav {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 18px;
+        padding: 14px 18px;
+        border-radius: 999px;
+      }
+      .brand {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        min-width: 0;
+      }
+      .brand-mark {
+        width: 46px;
+        height: 46px;
+        border-radius: 14px;
+        display: grid;
+        place-items: center;
+        background: linear-gradient(135deg, rgba(139, 220, 255, 0.95), rgba(139, 92, 246, 0.92));
+        box-shadow: 0 16px 34px rgba(139, 220, 255, 0.16);
+        overflow: hidden;
+        flex: 0 0 auto;
+      }
+      .brand-mark img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+      .brand-text strong {
+        display: block;
+        font-size: 1rem;
+        letter-spacing: -0.03em;
+        white-space: nowrap;
+      }
+      .brand-text span {
+        display: block;
+        color: var(--muted);
+        font-size: 0.8rem;
+        white-space: nowrap;
+      }
+      .nav-links {
+        display: flex;
+        align-items: center;
+        gap: 18px;
+        flex-wrap: wrap;
+      }
+      .nav-links a,
+      .nav-cta {
+        text-decoration: none;
+        color: var(--muted);
+        transition: 0.25s ease;
+        font-size: 0.95rem;
+      }
+      .nav-links a:hover,
+      .nav-cta:hover {
+        color: #fff;
+        transform: translateY(-1px);
+      }
+      .nav-cta {
+        border: 1px solid var(--line);
+        background: linear-gradient(90deg, rgba(139, 220, 255, 0.14), rgba(139, 92, 246, 0.18));
+        padding: 11px 15px;
+        border-radius: 14px;
+        color: #fff;
+        font-weight: 700;
+        white-space: nowrap;
+        flex-shrink: 0;
+      }
+      section {
+        padding: 82px 0;
+      }
+      .hero {
+        min-height: calc(100vh - 92px);
+        display: flex;
+        align-items: center;
+        padding-top: 20px;
+      }
+      .hero-grid {
+        display: grid;
+        grid-template-columns: 1.02fr 0.98fr;
+        gap: 30px;
+        align-items: center;
+      }
+      .eyebrow {
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+        padding: 8px 14px;
+        border-radius: 999px;
+        border: 1px solid var(--line);
+        background: rgba(255, 255, 255, 0.04);
+        color: #dcecff;
+        font-size: 0.82rem;
+        font-weight: 700;
+        margin-bottom: 18px;
+      }
+      .hero-copy h1 {
+        font-size: clamp(3rem, 7vw, 6rem);
+        line-height: 0.92;
+        letter-spacing: -0.08em;
+        font-weight: 800;
+        max-width: 760px;
+      }
+      .hero-copy h1 span {
+        background: linear-gradient(90deg, #fff, #bde9ff 40%, #b49dff 100%);
+        -webkit-background-clip: text;
+        background-clip: text;
+        color: transparent;
+      }
+      .hero-copy p {
+        margin-top: 18px;
+        max-width: 650px;
+        color: var(--muted);
+        font-size: 1.04rem;
+      }
+      .hero-actions {
+        display: flex;
+        gap: 14px;
+        flex-wrap: wrap;
+        margin-top: 28px;
+      }
+      .btn,
+      .btn-outline {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        padding: 15px 22px;
+        border-radius: 18px;
+        text-decoration: none;
+        border: 1px solid var(--line);
+        transition: 0.28s ease;
+        font-weight: 800;
+      }
+      .btn {
+        color: #fff;
+        background: linear-gradient(90deg, rgba(139, 220, 255, 0.18), rgba(139, 92, 246, 0.22));
+        box-shadow: 0 16px 36px rgba(0, 0, 0, 0.18);
+      }
+      .btn-outline {
+        color: #fff;
+        background: rgba(255, 255, 255, 0.04);
+      }
+      .btn:hover,
+      .btn-outline:hover {
+        transform: translateY(-3px);
+      }
+      .hero-points {
+        margin-top: 28px;
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 12px;
+        max-width: 700px;
+      }
+      .point {
+        display: flex;
+        align-items: flex-start;
+        gap: 10px;
+        padding: 16px 18px;
+        border-radius: 18px;
+        border: 1px solid var(--line);
+        background: rgba(255, 255, 255, 0.04);
+        color: var(--muted-2);
+        font-size: 0.93rem;
+      }
+      .point strong {
+        color: #fff;
+        display: block;
+        margin-bottom: 2px;
+        font-size: 0.94rem;
+      }
+      .profile-card {
+        padding: 20px;
+        border-radius: var(--radius-xl);
+        overflow: hidden;
+      }
+      .profile-wrap {
+        position: relative;
+        min-height: 580px;
+        border-radius: 28px;
+        overflow: hidden;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background:
+          radial-gradient(circle at 22% 20%, rgba(139, 220, 255, 0.1), transparent 22%),
+          radial-gradient(circle at 84% 12%, rgba(139, 92, 246, 0.13), transparent 24%),
+          linear-gradient(135deg, rgba(255, 255, 255, 0.03), rgba(255, 255, 255, 0.01));
+      }
+      .profile-wrap::after {
+        content: "";
+        position: absolute;
+        inset: auto 18px 18px 18px;
+        height: 102px;
+        border-radius: 22px;
+        background: linear-gradient(180deg, rgba(2, 6, 15, 0), rgba(2, 6, 15, 0.8));
+        pointer-events: none;
+        z-index: 1;
+      }
+      .profile-wrap img {
+        width: min(86%, 500px);
+        max-height: 560px;
+        object-fit: contain;
+        position: relative;
+        z-index: 0;
+        filter: drop-shadow(0 24px 42px rgba(0, 0, 0, 0.26));
+      }
+      .section-header {
+        max-width: 980px;
+        text-align: center;
+        margin: 0 auto 52px;
+      }
+      .section-kicker {
+        display: inline-block;
+        margin-bottom: 12px;
+        color: #bfe9ff;
+        font-size: 0.78rem;
+        font-weight: 800;
+        letter-spacing: 0.13em;
+        text-transform: uppercase;
+      }
+      .section-title {
+        font-size: clamp(1.9rem, 4.2vw, 3rem);
+        line-height: 1.08;
+        letter-spacing: -0.03em;
+        margin-bottom: 12px;
+        font-weight: 800;
+        max-width: 840px;
+        margin-left: auto;
+        margin-right: auto;
+        text-wrap: balance;
+      }
+      .section-subtitle {
+        margin-top: 8px;
+        color: var(--muted);
+        font-size: 1rem;
+        max-width: 720px;
+        margin-left: auto;
+        margin-right: auto;
+        text-wrap: balance;
+      }
+      .portfolio-header {
+        max-width: 1040px;
+        margin: 0 auto 58px;
+      }
+      .portfolio-title {
+        max-width: 820px;
+        text-align: center;
+        margin-inline: auto;
+        line-height: 1.08;
+        text-wrap: balance;
+      }
+      .typing-cursor::after {
+        content: "|";
+        margin-left: 4px;
+        animation: blink 1s infinite;
+      }
+      .portfolio-subtitle {
+        max-width: 620px;
+      }
+      .slider-card {
+        padding: 22px;
+        border-radius: var(--radius-xl);
+        overflow: hidden;
+        margin-top: 8px;
+      }
+      .window-bar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 12px;
+        margin-bottom: 16px;
+      }
+      .dots {
+        display: flex;
+        gap: 8px;
+      }
+      .dot {
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        background: rgba(255, 255, 255, 0.38);
+      }
+      .window-chip {
+        padding: 8px 12px;
+        border-radius: 999px;
+        border: 1px solid var(--line);
+        background: rgba(255, 255, 255, 0.04);
+        color: #dcecff;
+        font-size: 0.78rem;
+        letter-spacing: 0.04em;
+        text-transform: uppercase;
+      }
+      .slider-shell {
+        position: relative;
+        border-radius: 28px;
+        border: 1px solid rgba(255, 255, 255, 0.08);
+        overflow: hidden;
+        padding: 14px 0;
+        background: linear-gradient(180deg, rgba(255, 255, 255, 0.03), rgba(255, 255, 255, 0.02));
+      }
+      .fade-left,
+      .fade-right {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        width: 120px;
+        z-index: 2;
+        pointer-events: none;
+      }
+      .fade-left {
+        left: 0;
+        background: linear-gradient(90deg, rgba(7, 11, 22, 1) 0%, rgba(7, 11, 22, 0) 100%);
+      }
+      .fade-right {
+        right: 0;
+        background: linear-gradient(270deg, rgba(7, 11, 22, 1) 0%, rgba(7, 11, 22, 0) 100%);
+      }
+      .marquee {
+        overflow: hidden;
+        width: 100%;
+      }
+      .marquee-track {
+        display: flex;
+        width: max-content;
+        gap: 18px;
+        padding: 6px 18px;
+        will-change: transform;
+        animation: scrollLeft 90s linear infinite;
+      }
+      .slider-shell:hover .marquee-track {
+        animation-play-state: paused;
+      }
+      .thumb,
+      .thumb-card,
+      .extra-card,
+      .ba-card,
+      .review-card,
+      .process-card,
+      .faq-item,
+      .contact-item {
+        overflow: hidden;
+        border: 1px solid var(--line-soft);
+        background: rgba(255, 255, 255, 0.04);
+        box-shadow: var(--card-shadow);
+      }
+      .thumb {
+        position: relative;
+        flex: 0 0 auto;
+        width: 340px;
+        aspect-ratio: 16/9;
+        border-radius: 22px;
+        cursor: pointer;
+        isolation: isolate;
+      }
+      .thumb-card,
+      .extra-card {
+        position: relative;
+        border-radius: 28px;
+        aspect-ratio: 16/9;
+        transition:
+          transform 0.28s ease,
+          border-color 0.28s ease,
+          box-shadow 0.28s ease;
+        cursor: pointer;
+        isolation: isolate;
+      }
+      .thumb img,
+      .thumb-card img,
+      .extra-card img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center;
+        display: block;
+        filter: contrast(1.01) saturate(0.97) brightness(0.985);
+        transition:
+          transform 0.35s ease,
+          filter 0.35s ease;
+      }
+      .thumb-card:hover img,
+      .extra-card:hover img,
+      .thumb:hover img {
+        transform: scale(1.01);
+        filter: contrast(1.01) saturate(0.98) brightness(0.99);
+      }
+      .thumb-card::before,
+      .extra-card::before,
+      .thumb::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        pointer-events: none;
+        background: linear-gradient(180deg, rgba(255, 255, 255, 0.02), rgba(255, 255, 255, 0));
+        z-index: 1;
+      }
+      .thumb-card::after,
+      .extra-card::after,
+      .thumb::after {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(to bottom, rgba(255, 255, 255, 0.02), rgba(0, 0, 0, 0.06));
+        pointer-events: none;
+        z-index: 1;
+      }
+      .thumb-card:hover,
+      .extra-card:hover,
+      .ba-card:hover,
+      .thumb:hover,
+      .review-card:hover,
+      .process-card:hover,
+      .faq-item:hover,
+      .contact-item:hover {
+        border-color: var(--line-strong);
+        box-shadow: 0 24px 65px rgba(0, 0, 0, 0.3);
+        transform: translateY(-4px);
+      }
+      .main-grid,
+      .ba-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 18px;
+      }
+      .extra-grid {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 18px;
+      }
+      .review-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 18px;
+      }
+      .process-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 18px;
+      }
 
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
+      .review-card,
+      .process-card {
+        padding: 24px;
+        border-radius: 28px;
+      }
+      .review-card {
+        display: block;
+        text-decoration: none;
+        color: inherit;
+        min-height: 100%;
+      }
+      .review-card:focus-visible {
+        outline: 2px solid rgba(189, 233, 255, 0.85);
+        outline-offset: 3px;
+      }
+      .review-stars {
+        font-size: 1.05rem;
+        letter-spacing: 0.08em;
+        color: #ffcc33;
+        margin-bottom: 14px;
+        line-height: 1;
+      }
+      .review-quote {
+        color: #cfd9ea;
+        font-size: 1rem;
+        line-height: 1.75;
+        margin-bottom: 22px;
+      }
+      .review-top {
+        display: flex;
+        align-items: center;
+        gap: 14px;
+        margin-top: auto;
+      }
+      .review-avatar {
+        width: 56px;
+        height: 56px;
+        border-radius: 50%;
+        object-fit: cover;
+        flex: 0 0 auto;
+        border: 1px solid rgba(255, 255, 255, 0.1);
+      }
+      .review-person {
+        min-width: 0;
+      }
+      .review-person h3 {
+        font-size: 1rem;
+        letter-spacing: -0.02em;
+        margin: 0;
+        color: #fff;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        flex-wrap: wrap;
+      }
+      .review-badge {
+        width: 16px;
+        height: 16px;
+        object-fit: contain;
+        flex: 0 0 auto;
+        display: inline-block;
+        vertical-align: middle;
+      }
+      .review-person span {
+        display: block;
+        margin-top: 4px;
+        color: var(--muted);
+        font-size: 0.92rem;
+        line-height: 1.45;
+      }
+      .process-card h3 {
+        font-size: 1.06rem;
+        letter-spacing: -0.03em;
+        margin: 0 0 10px;
+        color: #fff;
+      }
+      .process-card p {
+        color: var(--muted);
+        font-size: 0.95rem;
+      }
+      .process-step {
+        width: 42px;
+        height: 42px;
+        border-radius: 50%;
+        display: grid;
+        place-items: center;
+        background: linear-gradient(135deg, rgba(139, 220, 255, 0.22), rgba(139, 92, 246, 0.22));
+        border: 1px solid var(--line);
+        margin-bottom: 14px;
+        font-weight: 800;
+        color: #fff;
+      }
+      .ba-card {
+        position: relative;
+        border-radius: 28px;
+        aspect-ratio: 16/9;
+        min-height: 220px;
+        user-select: none;
+        -webkit-user-select: none;
+        background: #060a15;
+        cursor: ew-resize;
+        overflow: hidden;
+        touch-action: pan-y;
+        -webkit-user-drag: none;
+      }
+      .ba-card img {
+        user-select: none;
+        -webkit-user-select: none;
+        -webkit-user-drag: none;
+        user-drag: none;
+        pointer-events: none;
+        -moz-user-select: none;
+      }
+      .ba-base,
+      .ba-overlay,
+      .ba-base img,
+      .ba-overlay img,
+      .ba-divider,
+      .ba-handle {
+        pointer-events: none;
+      }
+      .ba-card.is-dragging {
+        cursor: grabbing;
+      }
+      .ba-base,
+      .ba-overlay,
+      .ba-base img,
+      .ba-overlay img {
+        position: absolute;
+        inset: 0;
+        width: 100%;
+        height: 100%;
+      }
+      .ba-base img,
+      .ba-overlay img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        background: #060a15;
+      }
+      .ba-overlay {
+        overflow: hidden;
+        clip-path: inset(0 50% 0 0);
+        -webkit-clip-path: inset(0 50% 0 0);
+      }
+      .ba-divider {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 50%;
+        width: 2px;
+        background: rgba(255, 255, 255, 0.82);
+        box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.08);
+        z-index: 2;
+        transform: translateX(-1px);
+      }
+      .ba-handle {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 46px;
+        height: 46px;
+        border-radius: 50%;
+        background: rgba(255, 255, 255, 0.96);
+        color: #09111d;
+        display: grid;
+        place-items: center;
+        font-size: 18px;
+        font-weight: 800;
+        box-shadow: 0 12px 24px rgba(0, 0, 0, 0.22);
+        z-index: 3;
+      }
+      .faq-clean .section-header {
+        margin-bottom: 40px;
+      }
+      .faq-list {
+        display: grid;
+        gap: 16px;
+      }
+      .faq-clean .faq-item {
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        background: rgba(255, 255, 255, 0.04);
+        border-radius: 18px;
+        padding: 0 18px;
+        transition:
+          border-color 0.25s ease,
+          transform 0.25s ease,
+          box-shadow 0.25s ease;
+      }
+      .faq-clean .faq-item:hover {
+        border-color: rgba(255, 255, 255, 0.18);
+        transform: translateY(-2px);
+        box-shadow: 0 20px 50px rgba(0, 0, 0, 0.22);
+      }
+      .faq-clean summary {
+        list-style: none;
+        cursor: pointer;
+        padding: 20px 42px 20px 0;
+        font-size: 1.02rem;
+        font-weight: 700;
+        color: #fff;
+        position: relative;
+      }
+      .faq-clean summary::-webkit-details-marker {
+        display: none;
+      }
+      .faq-clean summary::after {
+        content: "+";
+        position: absolute;
+        right: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 30px;
+        height: 30px;
+        border-radius: 8px;
+        display: grid;
+        place-items: center;
+        border: 1px solid rgba(255, 255, 255, 0.12);
+        color: #fff;
+        font-size: 1.25rem;
+        line-height: 1;
+      }
+      .faq-clean details[open] summary::after {
+        content: "−";
+      }
+      .faq-clean .faq-item p {
+        color: var(--muted);
+        font-size: 0.96rem;
+        padding: 0 0 18px;
+        max-width: 900px;
+      }
+      .contact-card {
+        padding: 24px;
+        border-radius: 30px;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 16px;
+      }
+      .contact-item {
+        padding: 18px;
+        border-radius: 20px;
+      }
+      .contact-item small {
+        display: block;
+        color: #c8d9f5;
+        text-transform: uppercase;
+        letter-spacing: 0.1em;
+        font-size: 0.72rem;
+        margin-bottom: 6px;
+      }
+      .contact-item a {
+        color: #fff;
+        word-break: break-word;
+        text-decoration: none;
+        font-size: 1rem;
+        line-height: 1.45;
+        font-weight: 700;
+      }
+      .contact-item a:hover {
+        text-decoration: underline;
+      }
+      .contact-item span {
+        display: block;
+        color: var(--muted);
+        font-size: 0.9rem;
+        margin-top: 4px;
+      }
+      .lightbox {
+        position: fixed;
+        inset: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 22px;
+        background: rgba(3, 7, 18, 0.84);
+        backdrop-filter: blur(12px);
+        opacity: 0;
+        visibility: hidden;
+        transition:
+          opacity 0.28s ease,
+          visibility 0.28s ease;
+        z-index: 100;
+      }
+      .lightbox.show {
+        opacity: 1;
+        visibility: visible;
+      }
+      .lightbox-inner {
+        position: relative;
+        width: min(1220px, 100%);
+        padding: 14px;
+        border-radius: 28px;
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        background: rgba(255, 255, 255, 0.05);
+        box-shadow: 0 28px 80px rgba(0, 0, 0, 0.42);
+      }
+      .lightbox-frame {
+        width: 100%;
+        aspect-ratio: 16/9;
+        border-radius: 20px;
+        overflow: hidden;
+        background: #02050d;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .lightbox-frame img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+        object-position: center;
+        background: #02050d;
+        image-rendering: auto;
+      }
+      .lightbox-close {
+        position: absolute;
+        top: 12px;
+        right: 12px;
+        width: 44px;
+        height: 44px;
+        border: none;
+        border-radius: 14px;
+        cursor: pointer;
+        color: #fff;
+        font-size: 22px;
+        line-height: 1;
+        background: rgba(10, 17, 32, 0.82);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+      }
+      footer {
+        padding: 0 0 44px;
+        text-align: center;
+        color: #7f92b3;
+        font-size: 0.93rem;
+      }
+      .reveal {
+        opacity: 0;
+        transform: translateY(34px);
+        transition:
+          opacity 0.8s ease,
+          transform 0.8s ease;
+      }
+      .reveal.show {
+        opacity: 1;
+        transform: translateY(0);
+      }
+      @keyframes scrollLeft {
+        from {
+          transform: translateX(0);
         }
-
-        html {
-            scroll-behavior: smooth;
+        to {
+          transform: translateX(-50%);
         }
-
-        body {
-            min-height: 100vh;
-            font-family: "Plus Jakarta Sans", system-ui, Arial, sans-serif;
-            color: var(--text);
-            background:
-                radial-gradient(circle at 12% 8%, rgba(139, 220, 255, 0.13), transparent 18%),
-                radial-gradient(circle at 88% 14%, rgba(139, 92, 246, 0.18), transparent 24%),
-                radial-gradient(circle at 50% 76%, rgba(59, 130, 246, 0.08), transparent 22%),
-                linear-gradient(180deg, var(--bg-1) 0%, var(--bg-2) 45%, var(--bg-1) 100%);
-            overflow-x: hidden;
-            line-height: 1.65;
-            -webkit-font-smoothing: antialiased;
-            text-rendering: optimizeLegibility;
+      }
+      @keyframes blobFloat {
+        0%,
+        100% {
+          transform: translate(0, 0) scale(1);
         }
-
+        50% {
+          transform: translate(20px, 16px) scale(1.06);
+        }
+      }
+      @keyframes blink {
+        0%,
+        100% {
+          opacity: 1;
+        }
+        50% {
+          opacity: 0;
+        }
+      }
+      @media (max-width: 1120px) {
+        .hero-grid {
+          grid-template-columns: 1fr;
+        }
+        .main-grid,
+        .ba-grid,
+        .review-grid,
+        .process-grid {
+          grid-template-columns: repeat(2, 1fr);
+        }
+        .extra-grid {
+          grid-template-columns: repeat(2, 1fr);
+        }
+        .contact-card {
+          grid-template-columns: 1fr 1fr;
+        }
+        .thumb {
+          width: 310px;
+        }
+        .profile-wrap {
+          min-height: 430px;
+        }
+      }
+      @media (max-width: 760px) {
         body::before,
         body::after {
-            content: "";
-            position: fixed;
-            width: 340px;
-            height: 340px;
-            border-radius: 50%;
-            pointer-events: none;
-            opacity: 0.16;
-            filter: blur(72px);
-            z-index: 0;
+          width: 220px;
+          height: 220px;
+          filter: blur(44px);
+          opacity: 0.12;
         }
-
-        body::before {
-            top: -80px;
-            left: -90px;
-            background: linear-gradient(135deg, rgba(139, 220, 255, 0.85), transparent 45%);
-            animation: blobFloat 16s ease-in-out infinite;
-        }
-
-        body::after {
-            right: -110px;
-            bottom: -30px;
-            background: linear-gradient(135deg, rgba(139, 92, 246, 0.9), transparent 40%);
-            animation: blobFloat 20s ease-in-out infinite reverse;
-        }
-
-        img {
-            display: block;
-            max-width: 100%;
-            image-rendering: auto;
-            backface-visibility: hidden;
-            -webkit-backface-visibility: hidden;
-            transform: translateZ(0);
-        }
-
-        .container {
-            width: min(92%, var(--max));
-            margin: 0 auto;
-            position: relative;
-            z-index: 1;
-        }
-
         .glass {
-            background: linear-gradient(180deg, rgba(255, 255, 255, 0.065), rgba(255, 255, 255, 0.035));
-            border: 1px solid var(--line);
-            box-shadow: var(--shadow);
-            backdrop-filter: blur(10px);
-            -webkit-backdrop-filter: blur(10px);
+          backdrop-filter: blur(6px);
+          -webkit-backdrop-filter: blur(6px);
         }
-
-        .topbar {
-            position: sticky;
-            top: 14px;
-            z-index: 50;
-            padding-top: 18px;
-        }
-
-        .nav {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            gap: 18px;
-            padding: 14px 18px;
-            border-radius: 999px;
-        }
-
-        .brand {
-            display: flex;
-            align-items: center;
-            gap: 12px;
-            min-width: 0;
-        }
-
-        .brand-mark {
-            width: 46px;
-            height: 46px;
-            border-radius: 14px;
-            display: grid;
-            place-items: center;
-            background: linear-gradient(135deg, rgba(139, 220, 255, 0.95), rgba(139, 92, 246, 0.92));
-            box-shadow: 0 16px 34px rgba(139, 220, 255, 0.16);
-            overflow: hidden;
-            flex: 0 0 auto;
-        }
-
-        .brand-mark img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
-
-        .brand-text strong {
-            display: block;
-            font-size: 1rem;
-            letter-spacing: -0.03em;
-            white-space: nowrap;
-        }
-
-        .brand-text span {
-            display: block;
-            color: var(--muted);
-            font-size: 0.8rem;
-            white-space: nowrap;
-        }
-
-        .nav-links {
-            display: flex;
-            align-items: center;
-            gap: 18px;
-            flex-wrap: wrap;
-        }
-
-        .nav-links a,
-        .nav-cta {
-            text-decoration: none;
-            color: var(--muted);
-            transition: 0.25s ease;
-            font-size: 0.95rem;
-        }
-
-        .nav-links a:hover,
-        .nav-cta:hover {
-            color: #fff;
-            transform: translateY(-1px);
-        }
-
-        .nav-cta {
-            border: 1px solid var(--line);
-            background: linear-gradient(90deg, rgba(139, 220, 255, 0.14), rgba(139, 92, 246, 0.18));
-            padding: 11px 15px;
-            border-radius: 14px;
-            color: #fff;
-            font-weight: 700;
-            white-space: nowrap;
-            flex-shrink: 0;
-        }
-
         section {
-            padding: 82px 0;
+          padding: 72px 0;
         }
-
+        .topbar {
+          top: 8px;
+          padding-top: 10px;
+        }
+        .nav {
+          border-radius: 22px;
+          padding: 12px 14px;
+          gap: 12px;
+        }
+        .brand-text span,
+        .nav-links {
+          display: none;
+        }
+        .brand-text strong {
+          max-width: 132px;
+          overflow: hidden;
+          text-overflow: ellipsis;
+        }
+        .brand-mark {
+          width: 38px;
+          height: 38px;
+          border-radius: 12px;
+        }
+        .nav-cta {
+          padding: 9px 12px;
+          font-size: 0.88rem;
+        }
         .hero {
-            min-height: calc(100vh - 92px);
-            display: flex;
-            align-items: center;
-            padding-top: 20px;
+          min-height: auto;
         }
-
-        .hero-grid {
-            display: grid;
-            grid-template-columns: 1.02fr 0.98fr;
-            gap: 30px;
-            align-items: center;
+        .hero-points,
+        .main-grid,
+        .extra-grid,
+        .ba-grid,
+        .review-grid,
+        .process-grid {
+          grid-template-columns: 1fr;
         }
-
-        .eyebrow {
-            display: inline-flex;
-            align-items: center;
-            gap: 10px;
-            padding: 8px 14px;
-            border-radius: 999px;
-            border: 1px solid var(--line);
-            background: rgba(255, 255, 255, 0.04);
-            color: #dcecff;
-            font-size: 0.82rem;
-            font-weight: 700;
-            margin-bottom: 18px;
+        .thumb {
+          width: 280px;
         }
-
-        .hero-copy h1 {
-            font-size: clamp(3rem, 7vw, 6rem);
-            line-height: 0.92;
-            letter-spacing: -0.08em;
-            font-weight: 800;
-            max-width: 760px;
-        }
-
-        .hero-copy h1 span {
-            background: linear-gradient(90deg, #fff, #bde9ff 40%, #b49dff 100%);
-            -webkit-background-clip: text;
-            background-clip: text;
-            color: transparent;
-        }
-
-        .hero-copy p {
-            margin-top: 18px;
-            max-width: 650px;
-            color: var(--muted);
-            font-size: 1.04rem;
-        }
-
-        .hero-actions {
-            display: flex;
-            gap: 14px;
-            flex-wrap: wrap;
-            margin-top: 28px;
-        }
-
-        .btn,
-        .btn-outline {
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            gap: 10px;
-            padding: 15px 22px;
-            border-radius: 18px;
-            text-decoration: none;
-            border: 1px solid var(--line);
-            transition: 0.28s ease;
-            font-weight: 800;
-        }
-
-        .btn {
-            color: #fff;
-            background: linear-gradient(90deg, rgba(139, 220, 255, 0.18), rgba(139, 92, 246, 0.22));
-            box-shadow: 0 16px 36px rgba(0, 0, 0, 0.18);
-        }
-
-        .btn-outline {
-            color: #fff;
-            background: rgba(255, 255, 255, 0.04);
-        }
-
-        .btn:hover,
-        .btn-outline:hover {
-            transform: translateY(-3px);
-        }
-
-        .hero-points {
-            margin-top: 28px;
-            display: grid;
-            grid-template-columns: repeat(2, minmax(0, 1fr));
-            gap: 12px;
-            max-width: 700px;
-        }
-
-        .point {
-            display: flex;
-            align-items: flex-start;
-            gap: 10px;
-            padding: 16px 18px;
-            border-radius: 18px;
-            border: 1px solid var(--line);
-            background: rgba(255, 255, 255, 0.04);
-            color: var(--muted-2);
-            font-size: 0.93rem;
-        }
-
-        .point strong {
-            color: #fff;
-            display: block;
-            margin-bottom: 2px;
-            font-size: 0.94rem;
-        }
-
+        .slider-card,
         .profile-card {
-            padding: 20px;
-            border-radius: var(--radius-xl);
-            overflow: hidden;
+          padding: 16px;
         }
-
-        .profile-wrap {
-            position: relative;
-            min-height: 580px;
-            border-radius: 28px;
-            overflow: hidden;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            background:
-                radial-gradient(circle at 22% 20%, rgba(139, 220, 255, 0.1), transparent 22%),
-                radial-gradient(circle at 84% 12%, rgba(139, 92, 246, 0.13), transparent 24%),
-                linear-gradient(135deg, rgba(255, 255, 255, 0.03), rgba(255, 255, 255, 0.01));
-        }
-
-        .profile-wrap::after {
-            content: "";
-            position: absolute;
-            inset: auto 18px 18px 18px;
-            height: 102px;
-            border-radius: 22px;
-            background: linear-gradient(180deg, rgba(2, 6, 15, 0), rgba(2, 6, 15, 0.8));
-            pointer-events: none;
-            z-index: 1;
-        }
-
-        .profile-wrap img {
-            width: min(86%, 500px);
-            max-height: 560px;
-            object-fit: contain;
-            position: relative;
-            z-index: 0;
-            filter: drop-shadow(0 24px 42px rgba(0, 0, 0, 0.26));
-        }
-
-        .section-header {
-            max-width: 980px;
-            text-align: center;
-            margin: 0 auto 52px;
-        }
-
-        .section-kicker {
-            display: inline-block;
-            margin-bottom: 12px;
-            color: #bfe9ff;
-            font-size: 0.78rem;
-            font-weight: 800;
-            letter-spacing: 0.13em;
-            text-transform: uppercase;
-        }
-
-        .section-title {
-            font-size: clamp(1.9rem, 4.2vw, 3rem);
-            line-height: 1.08;
-            letter-spacing: -0.03em;
-            margin-bottom: 12px;
-            font-weight: 800;
-            max-width: 840px;
-            margin-left: auto;
-            margin-right: auto;
-            text-wrap: balance;
-        }
-
-        .section-subtitle {
-            margin-top: 8px;
-            color: var(--muted);
-            font-size: 1rem;
-            max-width: 720px;
-            margin-left: auto;
-            margin-right: auto;
-            text-wrap: balance;
-        }
-
-        .portfolio-header {
-            max-width: 1040px;
-            margin: 0 auto 58px;
-        }
-
-        .portfolio-title {
-            max-width: 820px;
-            text-align: center;
-            margin-inline: auto;
-            line-height: 1.08;
-            text-wrap: balance;
-        }
-
-        .typing-cursor::after {
-            content: "|";
-            margin-left: 4px;
-            animation: blink 1s infinite;
-        }
-
-        .portfolio-subtitle {
-            max-width: 620px;
-        }
-
-        .slider-card {
-            padding: 22px;
-            border-radius: var(--radius-xl);
-            overflow: hidden;
-            margin-top: 8px;
-        }
-
-        .window-bar {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            gap: 12px;
-            margin-bottom: 16px;
-        }
-
-        .dots {
-            display: flex;
-            gap: 8px;
-        }
-
-        .dot {
-            width: 10px;
-            height: 10px;
-            border-radius: 50%;
-            background: rgba(255, 255, 255, 0.38);
-        }
-
-        .window-chip {
-            padding: 8px 12px;
-            border-radius: 999px;
-            border: 1px solid var(--line);
-            background: rgba(255, 255, 255, 0.04);
-            color: #dcecff;
-            font-size: 0.78rem;
-            letter-spacing: 0.04em;
-            text-transform: uppercase;
-        }
-
-        .slider-shell {
-            position: relative;
-            border-radius: 28px;
-            border: 1px solid rgba(255, 255, 255, 0.08);
-            overflow: hidden;
-            padding: 14px 0;
-            background: linear-gradient(180deg, rgba(255, 255, 255, 0.03), rgba(255, 255, 255, 0.02));
-        }
-
         .fade-left,
         .fade-right {
-            position: absolute;
-            top: 0;
-            bottom: 0;
-            width: 120px;
-            z-index: 2;
-            pointer-events: none;
+          width: 58px;
         }
-
-        .fade-left {
-            left: 0;
-            background: linear-gradient(90deg, rgba(7, 11, 22, 1) 0%, rgba(7, 11, 22, 0) 100%);
+        .profile-wrap {
+          min-height: 330px;
         }
-
-        .fade-right {
-            right: 0;
-            background: linear-gradient(270deg, rgba(7, 11, 22, 1) 0%, rgba(7, 11, 22, 0) 100%);
+        .profile-wrap img {
+          width: min(86%, 340px);
         }
-
-        .marquee {
-            overflow: hidden;
-            width: 100%;
+        .contact-card {
+          grid-template-columns: 1fr;
+          padding: 18px;
         }
-
+        .section-header {
+          margin: 0 auto 40px;
+        }
+        .portfolio-header {
+          margin: 0 auto 44px;
+        }
+        .portfolio-title {
+          font-size: clamp(1.95rem, 8vw, 2.95rem);
+          max-width: 92%;
+          line-height: 1.08;
+        }
+        .portfolio-subtitle {
+          max-width: 420px;
+          font-size: 0.98rem;
+        }
+        .section-title {
+          font-size: clamp(1.8rem, 8vw, 2.8rem);
+          max-width: 760px;
+          line-height: 1.06;
+        }
+        .section-subtitle {
+          margin-top: 8px;
+          font-size: 0.98rem;
+        }
+        .ba-handle {
+          width: 42px;
+          height: 42px;
+        }
+        .window-bar {
+          margin-bottom: 12px;
+        }
+        .window-chip {
+          font-size: 0.72rem;
+          padding: 7px 10px;
+        }
         .marquee-track {
-            display: flex;
-            width: max-content;
-            gap: 18px;
-            padding: 6px 18px;
-            will-change: transform;
-            animation: scrollLeft 120s linear infinite;
+          gap: 14px;
+          padding: 4px 14px;
         }
-
-        .slider-shell:hover .marquee-track {
-            animation-play-state: paused;
+        .ba-card {
+          min-height: 180px;
+          aspect-ratio: 16/10;
+          cursor: default;
         }
-
-        .thumb,
+        .ba-base img,
+        .ba-overlay img {
+          object-fit: contain;
+        }
+        .thumb-card,
+        .extra-card {
+          aspect-ratio: 16/9;
+        }
+        .lightbox-frame {
+          aspect-ratio: 16/9;
+        }
+      }
+      @media (max-width: 520px) {
+        .container {
+          width: min(94%, var(--max));
+        }
+        .nav {
+          padding: 10px 12px;
+        }
+        .brand {
+          gap: 10px;
+        }
+        .brand-text strong {
+          max-width: 110px;
+          font-size: 0.92rem;
+        }
+        .nav-cta {
+          padding: 8px 10px;
+          font-size: 0.82rem;
+          border-radius: 12px;
+        }
+        .hero-copy h1 {
+          max-width: 100%;
+        }
+        .hero-copy p {
+          font-size: 0.96rem;
+        }
+        .btn,
+        .btn-outline {
+          width: 100%;
+          padding: 14px 18px;
+        }
+        .thumb {
+          width: 240px;
+        }
         .thumb-card,
         .extra-card,
         .ba-card,
         .review-card,
-        .process-card,
-        .faq-item,
-        .contact-item {
-            overflow: hidden;
-            border: 1px solid var(--line-soft);
-            background: rgba(255, 255, 255, 0.04);
-            box-shadow: var(--card-shadow);
-        }
-
-        .thumb {
-            position: relative;
-            flex: 0 0 auto;
-            width: 340px;
-            aspect-ratio: 16/9;
-            border-radius: 22px;
-            cursor: pointer;
-            isolation: isolate;
-        }
-
-        .thumb-card,
-        .extra-card {
-            position: relative;
-            border-radius: 28px;
-            aspect-ratio: 16/9;
-            transition:
-                transform 0.28s ease,
-                border-color 0.28s ease,
-                box-shadow 0.28s ease;
-            cursor: pointer;
-            isolation: isolate;
-        }
-
-        .thumb img,
-        .thumb-card img,
-        .extra-card img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            object-position: center;
-            display: block;
-            filter: contrast(1.01) saturate(0.97) brightness(0.985);
-            transition:
-                transform 0.35s ease,
-                filter 0.35s ease;
-        }
-
-        .thumb-card:hover img,
-        .extra-card:hover img,
-        .thumb:hover img {
-            transform: scale(1.01);
-            filter: contrast(1.01) saturate(0.98) brightness(0.99);
-        }
-
-        .thumb-card::before,
-        .extra-card::before,
-        .thumb::before {
-            content: "";
-            position: absolute;
-            inset: 0;
-            pointer-events: none;
-            background: linear-gradient(180deg, rgba(255, 255, 255, 0.02), rgba(255, 255, 255, 0));
-            z-index: 1;
-        }
-
-        .thumb-card::after,
-        .extra-card::after,
-        .thumb::after {
-            content: "";
-            position: absolute;
-            inset: 0;
-            background: linear-gradient(to bottom, rgba(255, 255, 255, 0.02), rgba(0, 0, 0, 0.06));
-            pointer-events: none;
-            z-index: 1;
-        }
-
-        .thumb-card:hover,
-        .extra-card:hover,
-        .ba-card:hover,
-        .thumb:hover,
-        .review-card:hover,
-        .process-card:hover,
-        .faq-item:hover,
-        .contact-item:hover {
-            border-color: var(--line-strong);
-            box-shadow: 0 24px 65px rgba(0, 0, 0, 0.3);
-            transform: translateY(-4px);
-        }
-
-        .main-grid,
-        .ba-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 18px;
-        }
-
-        .extra-grid {
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 18px;
-        }
-
-        .review-grid {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 18px;
-        }
-
-        .process-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 18px;
-        }
-
-        .review-card,
         .process-card {
-            padding: 24px;
-            border-radius: 28px;
+          border-radius: 22px;
         }
-
-        .review-card {
-            display: block;
-            text-decoration: none;
-            color: inherit;
-            min-height: 100%;
+        .slider-shell {
+          border-radius: 22px;
         }
-
-        .review-card:focus-visible {
-            outline: 2px solid rgba(189, 233, 255, 0.85);
-            outline-offset: 3px;
-        }
-
-        .review-stars {
-            font-size: 1.05rem;
-            letter-spacing: 0.08em;
-            color: #ffcc33;
-            margin-bottom: 14px;
-            line-height: 1;
-        }
-
-        .review-quote {
-            color: #cfd9ea;
-            font-size: 1rem;
-            line-height: 1.75;
-            margin-bottom: 22px;
-        }
-
-        .review-top {
-            display: flex;
-            align-items: center;
-            gap: 14px;
-            margin-top: auto;
-        }
-
-        .review-avatar {
-            width: 56px;
-            height: 56px;
-            border-radius: 50%;
-            object-fit: cover;
-            flex: 0 0 auto;
-            border: 1px solid rgba(255, 255, 255, 0.1);
-        }
-
-        .review-person {
-            min-width: 0;
-        }
-
-        .review-person h3 {
-            font-size: 1rem;
-            letter-spacing: -0.02em;
-            margin: 0;
-            color: #fff;
-            display: flex;
-            align-items: center;
-            gap: 8px;
-            flex-wrap: wrap;
-        }
-
-        .review-badge {
-            width: 16px;
-            height: 16px;
-            object-fit: contain;
-            flex: 0 0 auto;
-            display: inline-block;
-            vertical-align: middle;
-        }
-
-        .review-person span {
-            display: block;
-            margin-top: 4px;
-            color: var(--muted);
-            font-size: 0.92rem;
-            line-height: 1.45;
-        }
-
-        .process-card h3 {
-            font-size: 1.06rem;
-            letter-spacing: -0.03em;
-            margin: 0 0 10px;
-            color: #fff;
-        }
-
-        .process-card p {
-            color: var(--muted);
-            font-size: 0.95rem;
-        }
-
-        .process-step {
-            width: 42px;
-            height: 42px;
-            border-radius: 50%;
-            display: grid;
-            place-items: center;
-            background: linear-gradient(135deg, rgba(139, 220, 255, 0.22), rgba(139, 92, 246, 0.22));
-            border: 1px solid var(--line);
-            margin-bottom: 14px;
-            font-weight: 800;
-            color: #fff;
-        }
-
-        .ba-card {
-            position: relative;
-            border-radius: 28px;
-            aspect-ratio: 16/9;
-            min-height: 220px;
-            user-select: none;
-            -webkit-user-select: none;
-            background: #060a15;
-            cursor: ew-resize;
-            overflow: hidden;
-            touch-action: pan-y;
-            -webkit-user-drag: none;
-        }
-
-        .ba-card img {
-            user-select: none;
-            -webkit-user-select: none;
-            -webkit-user-drag: none;
-            user-drag: none;
-            pointer-events: none;
-            -moz-user-select: none;
-        }
-
-        .ba-base,
-        .ba-overlay,
-        .ba-base img,
-        .ba-overlay img,
-        .ba-divider,
-        .ba-handle {
-            pointer-events: none;
-        }
-
-        .ba-card.is-dragging {
-            cursor: grabbing;
-        }
-
-        .ba-base,
-        .ba-overlay,
-        .ba-base img,
-        .ba-overlay img {
-            position: absolute;
-            inset: 0;
-            width: 100%;
-            height: 100%;
-        }
-
-        .ba-base img,
-        .ba-overlay img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            background: #060a15;
-        }
-
-        .ba-overlay {
-            overflow: hidden;
-            clip-path: inset(0 50% 0 0);
-            -webkit-clip-path: inset(0 50% 0 0);
-        }
-
-        .ba-divider {
-            position: absolute;
-            top: 0;
-            bottom: 0;
-            left: 50%;
-            width: 2px;
-            background: rgba(255, 255, 255, 0.82);
-            box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.08);
-            z-index: 2;
-            transform: translateX(-1px);
-        }
-
-        .ba-handle {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            width: 46px;
-            height: 46px;
-            border-radius: 50%;
-            background: rgba(255, 255, 255, 0.96);
-            color: #09111d;
-            display: grid;
-            place-items: center;
-            font-size: 18px;
-            font-weight: 800;
-            box-shadow: 0 12px 24px rgba(0, 0, 0, 0.22);
-            z-index: 3;
-        }
-
-        .faq-clean .section-header {
-            margin-bottom: 40px;
-        }
-
-        .faq-list {
-            display: grid;
-            gap: 16px;
-        }
-
-        .faq-clean .faq-item {
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            background: rgba(255, 255, 255, 0.04);
-            border-radius: 18px;
-            padding: 0 18px;
-            transition:
-                border-color 0.25s ease,
-                transform 0.25s ease,
-                box-shadow 0.25s ease;
-        }
-
-        .faq-clean .faq-item:hover {
-            border-color: rgba(255, 255, 255, 0.18);
-            transform: translateY(-2px);
-            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.22);
-        }
-
-        .faq-clean summary {
-            list-style: none;
-            cursor: pointer;
-            padding: 20px 42px 20px 0;
-            font-size: 1.02rem;
-            font-weight: 700;
-            color: #fff;
-            position: relative;
-        }
-
-        .faq-clean summary::-webkit-details-marker {
-            display: none;
-        }
-
-        .faq-clean summary::after {
-            content: "+";
-            position: absolute;
-            right: 0;
-            top: 50%;
-            transform: translateY(-50%);
-            width: 30px;
-            height: 30px;
-            border-radius: 8px;
-            display: grid;
-            place-items: center;
-            border: 1px solid rgba(255, 255, 255, 0.12);
-            color: #fff;
-            font-size: 1.25rem;
-            line-height: 1;
-        }
-
-        .faq-clean details[open] summary::after {
-            content: "&minus;";
-        }
-
-        .faq-clean .faq-item p {
-            color: var(--muted);
-            font-size: 0.96rem;
-            padding: 0 0 18px;
-            max-width: 900px;
-        }
-
-        .contact-card {
-            padding: 24px;
-            border-radius: 30px;
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 16px;
-        }
-
-        .contact-item {
-            padding: 18px;
-            border-radius: 20px;
-        }
-
-        .contact-item small {
-            display: block;
-            color: #c8d9f5;
-            text-transform: uppercase;
-            letter-spacing: 0.1em;
-            font-size: 0.72rem;
-            margin-bottom: 6px;
-        }
-
-        .contact-item a {
-            color: #fff;
-            word-break: break-word;
-            text-decoration: none;
-            font-size: 1rem;
-            line-height: 1.45;
-            font-weight: 700;
-        }
-
-        .contact-item a:hover {
-            text-decoration: underline;
-        }
-
-        .contact-item span {
-            display: block;
-            color: var(--muted);
-            font-size: 0.9rem;
-            margin-top: 4px;
-        }
-
         .lightbox {
-            position: fixed;
-            inset: 0;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            padding: 22px;
-            background: rgba(3, 7, 18, 0.84);
-            backdrop-filter: blur(12px);
-            opacity: 0;
-            visibility: hidden;
-            transition:
-                opacity 0.28s ease,
-                visibility 0.28s ease;
-            z-index: 100;
+          padding: 14px;
         }
-
-        .lightbox.show {
-            opacity: 1;
-            visibility: visible;
-        }
-
         .lightbox-inner {
-            position: relative;
-            width: min(1220px, 100%);
-            padding: 14px;
-            border-radius: 28px;
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            background: rgba(255, 255, 255, 0.05);
-            box-shadow: 0 28px 80px rgba(0, 0, 0, 0.42);
+          padding: 10px;
+          border-radius: 20px;
         }
-
         .lightbox-frame {
-            width: 100%;
-            aspect-ratio: 16/9;
-            border-radius: 20px;
-            overflow: hidden;
-            background: #02050d;
-            display: flex;
-            align-items: center;
-            justify-content: center;
+          border-radius: 14px;
         }
-
-        .lightbox-frame img {
-            width: 100%;
-            height: 100%;
-            object-fit: contain;
-            object-position: center;
-            background: #02050d;
-            image-rendering: auto;
+        .contact-item,
+        .faq-clean .faq-item {
+          padding-left: 16px;
+          padding-right: 16px;
         }
-
-        .lightbox-close {
-            position: absolute;
-            top: 12px;
-            right: 12px;
-            width: 44px;
-            height: 44px;
-            border: none;
-            border-radius: 14px;
-            cursor: pointer;
-            color: #fff;
-            font-size: 22px;
-            line-height: 1;
-            background: rgba(10, 17, 32, 0.82);
-            border: 1px solid rgba(255, 255, 255, 0.1);
+        .faq-clean summary {
+          font-size: 0.96rem;
+          padding: 18px 40px 18px 0;
         }
-
-        footer {
-            padding: 0 0 44px;
-            text-align: center;
-            color: #7f92b3;
-            font-size: 0.93rem;
+        .faq-clean .faq-item p {
+          font-size: 0.93rem;
         }
-
-        .reveal {
-            opacity: 0;
-            transform: translateY(34px);
-            transition:
-                opacity 0.8s ease,
-                transform 0.8s ease;
+        .ba-card {
+          min-height: 165px;
         }
-
-        .reveal.show {
-            opacity: 1;
-            transform: translateY(0);
+        .ba-handle {
+          width: 38px;
+          height: 38px;
+          font-size: 15px;
         }
-
-        @keyframes scrollLeft {
-            from {
-                transform: translateX(0);
-            }
-
-            to {
-                transform: translateX(-50%);
-            }
-        }
-
-        @keyframes blobFloat {
-
-            0%,
-            100% {
-                transform: translate(0, 0) scale(1);
-            }
-
-            50% {
-                transform: translate(20px, 16px) scale(1.06);
-            }
-        }
-
-        @keyframes blink {
-
-            0%,
-            100% {
-                opacity: 1;
-            }
-
-            50% {
-                opacity: 0;
-            }
-        }
-
-        @media (max-width: 1120px) {
-            .hero-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .main-grid,
-            .ba-grid,
-            .review-grid,
-            .process-grid {
-                grid-template-columns: repeat(2, 1fr);
-            }
-
-            .extra-grid {
-                grid-template-columns: repeat(2, 1fr);
-            }
-
-            .contact-card {
-                grid-template-columns: 1fr 1fr;
-            }
-
-            .thumb {
-                width: 310px;
-            }
-
-            .profile-wrap {
-                min-height: 430px;
-            }
-        }
-
-        @media (max-width: 760px) {
-            section {
-                padding: 72px 0;
-            }
-
-            .topbar {
-                top: 8px;
-                padding-top: 10px;
-            }
-
-            .nav {
-                border-radius: 22px;
-                padding: 12px 14px;
-                gap: 12px;
-            }
-
-            .brand-text span,
-            .nav-links {
-                display: none;
-            }
-
-            .brand-text strong {
-                max-width: 132px;
-                overflow: hidden;
-                text-overflow: ellipsis;
-            }
-
-            .brand-mark {
-                width: 38px;
-                height: 38px;
-                border-radius: 12px;
-            }
-
-            .nav-cta {
-                padding: 9px 12px;
-                font-size: 0.88rem;
-            }
-
-            .hero {
-                min-height: auto;
-            }
-
-            .hero-points,
-            .main-grid,
-            .extra-grid,
-            .ba-grid,
-            .review-grid,
-            .process-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .thumb {
-                width: 280px;
-            }
-
-            .slider-card,
-            .profile-card {
-                padding: 16px;
-            }
-
-            .fade-left,
-            .fade-right {
-                width: 58px;
-            }
-
-            .profile-wrap {
-                min-height: 330px;
-            }
-
-            .profile-wrap img {
-                width: min(86%, 340px);
-            }
-
-            .contact-card {
-                grid-template-columns: 1fr;
-                padding: 18px;
-            }
-
-            .section-header {
-                margin: 0 auto 40px;
-            }
-
-            .portfolio-header {
-                margin: 0 auto 44px;
-            }
-
-            .portfolio-title {
-                font-size: clamp(1.95rem, 8vw, 2.95rem);
-                max-width: 92%;
-                line-height: 1.08;
-            }
-
-            .portfolio-subtitle {
-                max-width: 420px;
-                font-size: 0.98rem;
-            }
-
-            .section-title {
-                font-size: clamp(1.8rem, 8vw, 2.8rem);
-                max-width: 760px;
-                line-height: 1.06;
-            }
-
-            .section-subtitle {
-                margin-top: 8px;
-                font-size: 0.98rem;
-            }
-
-            .ba-handle {
-                width: 42px;
-                height: 42px;
-            }
-
-            .window-bar {
-                margin-bottom: 12px;
-            }
-
-            .window-chip {
-                font-size: 0.72rem;
-                padding: 7px 10px;
-            }
-
-            .marquee-track {
-                gap: 14px;
-                padding: 4px 14px;
-            }
-
-            .ba-card {
-                min-height: 180px;
-                aspect-ratio: 16/10;
-                cursor: default;
-            }
-
-            .ba-base img,
-            .ba-overlay img {
-                object-fit: contain;
-            }
-
-            .thumb-card,
-            .extra-card {
-                aspect-ratio: 16/9;
-            }
-
-            .lightbox-frame {
-                aspect-ratio: 16/9;
-            }
-        }
-
-        @media (max-width: 520px) {
-            .container {
-                width: min(94%, var(--max));
-            }
-
-            .nav {
-                padding: 10px 12px;
-            }
-
-            .brand {
-                gap: 10px;
-            }
-
-            .brand-text strong {
-                max-width: 110px;
-                font-size: 0.92rem;
-            }
-
-            .nav-cta {
-                padding: 8px 10px;
-                font-size: 0.82rem;
-                border-radius: 12px;
-            }
-
-            .hero-copy h1 {
-                max-width: 100%;
-            }
-
-            .hero-copy p {
-                font-size: 0.96rem;
-            }
-
-            .btn,
-            .btn-outline {
-                width: 100%;
-                padding: 14px 18px;
-            }
-
-            .thumb {
-                width: 240px;
-            }
-
-            .thumb-card,
-            .extra-card,
-            .ba-card,
-            .review-card,
-            .process-card {
-                border-radius: 22px;
-            }
-
-            .slider-shell {
-                border-radius: 22px;
-            }
-
-            .lightbox {
-                padding: 14px;
-            }
-
-            .lightbox-inner {
-                padding: 10px;
-                border-radius: 20px;
-            }
-
-            .lightbox-frame {
-                border-radius: 14px;
-            }
-
-            .contact-item,
-            .faq-clean .faq-item {
-                padding-left: 16px;
-                padding-right: 16px;
-            }
-
-            .faq-clean summary {
-                font-size: 0.96rem;
-                padding: 18px 40px 18px 0;
-            }
-
-            .faq-clean .faq-item p {
-                font-size: 0.93rem;
-            }
-
-            .ba-card {
-                min-height: 165px;
-            }
-
-            .ba-handle {
-                width: 38px;
-                height: 38px;
-                font-size: 15px;
-            }
-        }
+      }
     </style>
-</head>
-
-<body>
+  </head>
+  <body>
     <div class="topbar">
-        <div class="container">
-            <nav class="nav glass">
-                <div class="brand">
-                    <div class="brand-mark"><img src="Logo/1.webp" alt="Abdullah Thumbnails Logo"></div>
-                    <div class="brand-text">
-                        <strong>Abdullah Al Mamun</strong>
-                        <span>Clean Thumbnails Built for Clicks</span>
-                    </div>
-                </div>
-                <div class="nav-links">
-                    <a href="#portfolio">Portfolio</a>
-                    <a href="#featured">Featured Work</a>
-                    <a href="#before-after">Before / After</a>
-                    <a href="#faq">FAQ</a>
-                    <a href="#contact">Contact</a>
-                </div>
-                <a href="#contact" class="nav-cta">Get My Thumbnail</a>
-            </nav>
-        </div>
+      <div class="container">
+        <nav class="nav glass">
+          <div class="brand">
+            <div class="brand-mark"><img src="Logo/1.webp" alt="Abdullah Thumbnails Logo" /></div>
+            <div class="brand-text">
+              <strong>Abdullah Al Mamun</strong>
+              <span>Clean Thumbnails Built for Clicks</span>
+            </div>
+          </div>
+          <div class="nav-links">
+            <a href="#portfolio">Portfolio</a>
+            <a href="#featured">Featured Work</a>
+            <a href="#before-after">Before / After</a>
+            <a href="#faq">FAQ</a>
+            <a href="#contact">Contact</a>
+          </div>
+          <a href="#contact" class="nav-cta">Get My Thumbnail</a>
+        </nav>
+      </div>
     </div>
 
     <section class="hero">
-        <div class="container hero-grid">
-            <div class="hero-copy reveal">
-                <div class="eyebrow">Clean Design &bull; Better Clicks &bull; Fast Delivery</div>
-                <h1>
-                    If your videos are not getting clicks,
-                    <span>your thumbnail is the first thing to fix.</span>
-                </h1>
-                <p>
-                    I design clean, high-impact thumbnails that make your videos look stronger, clearer, and more worth
-                    clicking.
-                </p>
-                <div class="hero-actions">
-                    <a href="#featured" class="btn">View My Work</a>
-                    <a href="#contact" class="btn-outline">Get My Thumbnail</a>
-                </div>
-                <p style="margin-top: 10px; color: var(--muted); font-size: 0.88rem">
-                    Fast communication &bull; Clean design &bull; Built for YouTube viewers
-                </p>
-                <div class="hero-points">
-                    <div class="point">
-                        <div>&#10022;</div>
-                        <div>
-                            <strong>More Clicks</strong>
-                            Thumbnails built to help your video stand out in a crowded feed.
-                        </div>
-                    </div>
-                    <div class="point">
-                        <div>&#10022;</div>
-                        <div>
-                            <strong>Clean Look</strong>
-                            No messy layout &mdash; just strong composition and clear focus.
-                        </div>
-                    </div>
-                    <div class="point">
-                        <div>&#10022;</div>
-                        <div>
-                            <strong>Easy to Understand</strong>
-                            Viewers should get the idea fast, even on a small screen.
-                        </div>
-                    </div>
-                    <div class="point">
-                        <div>&#10022;</div>
-                        <div>
-                            <strong>Simple Process</strong>
-                            Share your idea, review the design, and get the final thumbnail quickly.
-                        </div>
-                    </div>
-                </div>
+      <div class="container hero-grid">
+        <div class="hero-copy reveal">
+          <div class="eyebrow">Clean Design • Better Clicks • Fast Delivery</div>
+          <h1>
+            If your videos are not getting clicks,
+            <span>your thumbnail is the first thing to fix.</span>
+          </h1>
+          <p>
+            I design clean, high-impact thumbnails that make your videos look stronger, clearer, and more worth
+            clicking.
+          </p>
+          <div class="hero-actions">
+            <a href="#featured" class="btn">View My Work</a>
+            <a href="#contact" class="btn-outline">Get My Thumbnail</a>
+          </div>
+          <p style="margin-top: 10px; color: var(--muted); font-size: 0.88rem">
+            Fast communication • Clean design • Built for YouTube viewers
+          </p>
+          <div class="hero-points">
+            <div class="point">
+              <div>✦</div>
+              <div>
+                <strong>More Clicks</strong>
+                Thumbnails built to help your video stand out in a crowded feed.
+              </div>
             </div>
-            <div class="profile-card glass reveal">
-                <div class="profile-wrap">
-                    <img src="intro_image/1.webp" alt="YouTube thumbnail designer portfolio hero image" loading="eager" decoding="async" fetchpriority="high">
-                </div>
+            <div class="point">
+              <div>✦</div>
+              <div>
+                <strong>Clean Look</strong>
+                No messy layout — just strong composition and clear focus.
+              </div>
             </div>
+            <div class="point">
+              <div>✦</div>
+              <div>
+                <strong>Easy to Understand</strong>
+                Viewers should get the idea fast, even on a small screen.
+              </div>
+            </div>
+            <div class="point">
+              <div>✦</div>
+              <div>
+                <strong>Simple Process</strong>
+                Share your idea, review the design, and get the final thumbnail quickly.
+              </div>
+            </div>
+          </div>
         </div>
+        <div class="profile-card glass reveal">
+          <div class="profile-wrap">
+            <img
+              src="intro_image/1.webp"
+              alt="YouTube thumbnail designer portfolio hero image"
+              loading="eager"
+              decoding="async"
+              fetchpriority="high"
+            />
+          </div>
+        </div>
+      </div>
     </section>
 
-    <section id="portfolio">
-        <div class="container">
-            <div class="section-header reveal portfolio-header">
-                <span class="section-kicker">Portfolio</span>
-                <h2 class="section-title portfolio-title typing-cursor" id="rotatingTitle">
-                    Better thumbnails start with better presentation.
-                </h2>
-                <p class="section-subtitle portfolio-subtitle">
-                    A clean showcase of work designed to stop scrolling and earn more clicks.
-                </p>
-            </div>
-            <div class="slider-card glass reveal">
-                <div class="window-bar">
-                    <div class="dots" aria-hidden="true">
-                        <span class="dot"></span>
-                        <span class="dot"></span>
-                        <span class="dot"></span>
-                    </div>
-                    <div class="window-chip">Selected work</div>
-                </div>
-                <div class="slider-shell">
-                    <div class="fade-left"></div>
-                    <div class="fade-right"></div>
-                    <div class="marquee">
-                        <div class="marquee-track" id="marqueeTrack"></div>
-                    </div>
-                </div>
-            </div>
+    <section class="content-section" id="portfolio">
+      <div class="container">
+        <div class="section-header reveal portfolio-header">
+          <span class="section-kicker">Portfolio</span>
+          <h2 class="section-title portfolio-title typing-cursor" id="rotatingTitle">
+            Better thumbnails start with better presentation.
+          </h2>
+          <p class="section-subtitle portfolio-subtitle">
+            A clean showcase of work designed to stop scrolling and earn more clicks.
+          </p>
         </div>
+        <div class="slider-card glass reveal">
+          <div class="window-bar">
+            <div class="dots" aria-hidden="true">
+              <span class="dot"></span>
+              <span class="dot"></span>
+              <span class="dot"></span>
+            </div>
+            <div class="window-chip">Selected work</div>
+          </div>
+          <div class="slider-shell">
+            <div class="fade-left"></div>
+            <div class="fade-right"></div>
+            <div class="marquee"><div class="marquee-track" id="marqueeTrack"></div></div>
+          </div>
+        </div>
+      </div>
     </section>
 
-    <section id="featured">
-        <div class="container">
-            <div class="section-header reveal">
-                <span class="section-kicker">Featured Work</span>
-                <h2 class="section-title">Thumbnails designed to make your videos look stronger before the click</h2>
-                <p class="section-subtitle">A clean showcase of selected work clients can review first.</p>
-            </div>
-            <div class="main-grid" id="mainGrid"></div>
+    <section class="content-section" id="featured">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-kicker">Featured Work</span>
+          <h2 class="section-title">Thumbnails designed to make your videos look stronger before the click</h2>
+          <p class="section-subtitle">A clean showcase of selected work clients can review first.</p>
         </div>
+        <div class="main-grid" id="mainGrid"></div>
+      </div>
     </section>
 
     <!-- Put your badge image here: reviews/verified-badge.png -->
-    <section id="reviews">
-        <div class="container">
-            <div class="section-header reveal">
-                <span class="section-kicker">Creator Feedback</span>
-                <h2 class="section-title">Feedback from creators I have worked with</h2>
-                <p class="section-subtitle">
-                    Short, direct feedback that reflects what usually matters most: clarity, presentation, and how clickable the
-                    video feels before anyone presses play.
-                </p>
-            </div>
-
-            <div class="review-grid">
-                <article class="review-card reveal">
-                    <div class="review-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-                    <p class="review-quote">
-                        "Abdullah is a highly reliable designer who consistently delivers clean, high-quality thumbnails. He
-                        understands how to make content look more clickable without overcomplicating the design."
-                    </p>
-                    <div class="review-top">
-                        <img src="reviews/sabri.webp" class="review-avatar">
-                        <div class="review-person">
-                            <h3>
-                                Sabri Suby
-                                <img src="reviews/verified-badge.png" class="review-badge">
-                            </h3>
-                            <span>YouTuber &middot; 460K subscribers</span>
-                        </div>
-                    </div>
-                </article>
-
-                <article class="review-card reveal">
-                    <div class="review-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-                    <p class="review-quote">
-                        "He got the idea right away and turned it into something much cleaner and more clickable. The difference
-                        is noticeable."
-                    </p>
-                    <div class="review-top">
-                        <img src="reviews/jack.webp" class="review-avatar">
-                        <div class="review-person">
-                            <h3>
-                                Jack Pembrook
-                                <img src="reviews/verified-badge.png" class="review-badge">
-                            </h3>
-                            <span>YouTuber &middot; 1.7M subscribers</span>
-                        </div>
-                    </div>
-                </article>
-
-                <article class="review-card reveal">
-                    <div class="review-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-                    <p class="review-quote">
-                        "Really solid sense of structure and clarity. The thumbnail stands out better in the feed and makes the
-                        video look more professional overall."
-                    </p>
-                    <div class="review-top">
-                        <img src="reviews/techsource.webp" class="review-avatar">
-                        <div class="review-person">
-                            <h3>
-                                TechSource
-                                <img src="reviews/verified-badge.png" class="review-badge">
-                            </h3>
-                            <span>YouTuber &middot; 4.09M subscribers</span>
-                        </div>
-                    </div>
-                </article>
-
-                <article class="review-card reveal">
-                    <div class="review-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-                    <p class="review-quote">
-                        "The process was simple and the result was exactly what I needed. The thumbnail looks cleaner, more
-                        focused, and fits the video much better."
-                    </p>
-                    <div class="review-top">
-                        <img src="reviews/solazzo.webp" class="review-avatar">
-                        <div class="review-person">
-                            <h3>Solazzo</h3>
-                            <span>YouTuber &middot; 12K subscribers</span>
-                        </div>
-                    </div>
-                </article>
-            </div>
+    <section class="content-section" id="reviews">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-kicker">Creator Feedback</span>
+          <h2 class="section-title">Feedback from creators I have worked with</h2>
+          <p class="section-subtitle">
+            Short, direct feedback that reflects what usually matters most: clarity, presentation, and how clickable the
+            video feels before anyone presses play.
+          </p>
         </div>
+
+        <div class="review-grid">
+          <article class="review-card reveal">
+            <div class="review-stars">★★★★★</div>
+            <p class="review-quote">
+              "Abdullah is a highly reliable designer who consistently delivers clean, high-quality thumbnails. He
+              understands how to make content look more clickable without overcomplicating the design."
+            </p>
+            <div class="review-top">
+              <img src="reviews/sabri.webp" class="review-avatar" />
+              <div class="review-person">
+                <h3>
+                  Sabri Suby
+                  <img src="reviews/verified-badge.png" class="review-badge" />
+                </h3>
+                <span>YouTuber · 460K subscribers</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="review-card reveal">
+            <div class="review-stars">★★★★★</div>
+            <p class="review-quote">
+              "He got the idea right away and turned it into something much cleaner and more clickable. The difference
+              is noticeable."
+            </p>
+            <div class="review-top">
+              <img src="reviews/jack.webp" class="review-avatar" />
+              <div class="review-person">
+                <h3>
+                  Jack Pembrook
+                  <img src="reviews/verified-badge.png" class="review-badge" />
+                </h3>
+                <span>YouTuber · 1.7M subscribers</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="review-card reveal">
+            <div class="review-stars">★★★★★</div>
+            <p class="review-quote">
+              "Really solid sense of structure and clarity. The thumbnail stands out better in the feed and makes the
+              video look more professional overall."
+            </p>
+            <div class="review-top">
+              <img src="reviews/techsource.webp" class="review-avatar" />
+              <div class="review-person">
+                <h3>
+                  TechSource
+                  <img src="reviews/verified-badge.png" class="review-badge" />
+                </h3>
+                <span>YouTuber · 4.09M subscribers</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="review-card reveal">
+            <div class="review-stars">★★★★★</div>
+            <p class="review-quote">
+              "The process was simple and the result was exactly what I needed. The thumbnail looks cleaner, more
+              focused, and fits the video much better."
+            </p>
+            <div class="review-top">
+              <img src="reviews/solazzo.webp" class="review-avatar" />
+              <div class="review-person">
+                <h3>Solazzo</h3>
+                <span>YouTuber · 12K subscribers</span>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
     </section>
 
-    <section id="before-after">
-        <div class="container">
-            <div class="section-header reveal">
-                <span class="section-kicker">Before / After</span>
-                <h2 class="section-title">See the difference a better thumbnail can make</h2>
-                <p class="section-subtitle">
-                    A clearer design helps your content look stronger, easier to understand, and more clickable.
-                </p>
-            </div>
-            <div class="ba-grid" id="beforeAfterGrid"></div>
+    <section class="content-section" id="before-after">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-kicker">Before / After</span>
+          <h2 class="section-title">See the difference a better thumbnail can make</h2>
+          <p class="section-subtitle">
+            A clearer design helps your content look stronger, easier to understand, and more clickable.
+          </p>
         </div>
+        <div class="ba-grid" id="beforeAfterGrid"></div>
+      </div>
     </section>
 
-    <section>
-        <div class="container">
-            <div class="section-header reveal">
-                <span class="section-kicker">Process</span>
-                <h2 class="section-title">Simple process, smooth communication</h2>
-                <p class="section-subtitle">
-                    Everything is kept straightforward so you can move from idea to final thumbnail without friction.
-                </p>
-            </div>
-            <div class="process-grid">
-                <article class="process-card reveal">
-                    <div class="process-step">1</div>
-                    <h3>Send your idea</h3>
-                    <p>Share the title, topic, style direction, or any reference that helps explain your video.</p>
-                </article>
-                <article class="process-card reveal">
-                    <div class="process-step">2</div>
-                    <h3>I design the thumbnail</h3>
-                    <p>The thumbnail is built around clarity, visual impact, and a stronger first impression.</p>
-                </article>
-                <article class="process-card reveal">
-                    <div class="process-step">3</div>
-                    <h3>Review and finalize</h3>
-                    <p>You review the design, request changes if needed, and receive the final version ready to upload.</p>
-                </article>
-            </div>
+    <section class="content-section">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-kicker">Process</span>
+          <h2 class="section-title">Simple process, smooth communication</h2>
+          <p class="section-subtitle">
+            Everything is kept straightforward so you can move from idea to final thumbnail without friction.
+          </p>
         </div>
+        <div class="process-grid">
+          <article class="process-card reveal">
+            <div class="process-step">1</div>
+            <h3>Send your idea</h3>
+            <p>Share the title, topic, style direction, or any reference that helps explain your video.</p>
+          </article>
+          <article class="process-card reveal">
+            <div class="process-step">2</div>
+            <h3>I design the thumbnail</h3>
+            <p>The thumbnail is built around clarity, visual impact, and a stronger first impression.</p>
+          </article>
+          <article class="process-card reveal">
+            <div class="process-step">3</div>
+            <h3>Review and finalize</h3>
+            <p>You review the design, request changes if needed, and receive the final version ready to upload.</p>
+          </article>
+        </div>
+      </div>
     </section>
 
-    <section id="gallery">
-        <div class="container">
-            <div class="section-header reveal">
-                <span class="section-kicker">More Work</span>
-                <h2 class="section-title">More examples across different styles</h2>
-                <p class="section-subtitle">A wider look at the quality, consistency, and variety of the work.</p>
-            </div>
-            <div class="extra-grid" id="extraGrid"></div>
+    <section class="content-section" id="gallery">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-kicker">More Work</span>
+          <h2 class="section-title">More examples across different styles</h2>
+          <p class="section-subtitle">A wider look at the quality, consistency, and variety of the work.</p>
         </div>
+        <div class="extra-grid" id="extraGrid"></div>
+      </div>
     </section>
 
     <section id="faq" class="faq-clean">
-        <div class="container">
-            <div class="section-header reveal">
-                <span class="section-kicker">FAQ</span>
-                <h2 class="section-title">Frequently asked questions</h2>
-            </div>
-            <div class="faq-list">
-                <details class="faq-item reveal">
-                    <summary>How do we get started?</summary>
-                    <p>
-                        Send your video title, topic, and any style reference you want followed. That gives me a clear direction
-                        for the design.
-                    </p>
-                </details>
-                <details class="faq-item reveal">
-                    <summary>How fast can you deliver a thumbnail?</summary>
-                    <p>
-                        Most thumbnails are delivered within 12 to 24 hours. If your upload is urgent, faster delivery may also be
-                        possible.
-                    </p>
-                </details>
-                <details class="faq-item reveal">
-                    <summary>Do you offer revisions?</summary>
-                    <p>Yes. Revisions are included so the final thumbnail feels right for your content and your audience.</p>
-                </details>
-                <details class="faq-item reveal">
-                    <summary>What do you need from me?</summary>
-                    <p>
-                        I usually need the video title, topic, your main idea if you have one, and any useful reference image or
-                        inspiration.
-                    </p>
-                </details>
-                <details class="faq-item reveal">
-                    <summary>Can you design for my niche?</summary>
-                    <p>
-                        Yes. I can design for gaming, AI, tech, finance, commentary, reactions, business, and other YouTube
-                        content styles.
-                    </p>
-                </details>
-                <details class="faq-item reveal">
-                    <summary>What if I do not like the first version?</summary>
-                    <p>No problem. You can request changes and I will refine the design so it matches your video better.</p>
-                </details>
-            </div>
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-kicker">FAQ</span>
+          <h2 class="section-title">Frequently asked questions</h2>
         </div>
+        <div class="faq-list">
+          <details class="faq-item reveal">
+            <summary>How do we get started?</summary>
+            <p>
+              Send your video title, topic, and any style reference you want followed. That gives me a clear direction
+              for the design.
+            </p>
+          </details>
+          <details class="faq-item reveal">
+            <summary>How fast can you deliver a thumbnail?</summary>
+            <p>
+              Most thumbnails are delivered within 12 to 24 hours. If your upload is urgent, faster delivery may also be
+              possible.
+            </p>
+          </details>
+          <details class="faq-item reveal">
+            <summary>Do you offer revisions?</summary>
+            <p>Yes. Revisions are included so the final thumbnail feels right for your content and your audience.</p>
+          </details>
+          <details class="faq-item reveal">
+            <summary>What do you need from me?</summary>
+            <p>
+              I usually need the video title, topic, your main idea if you have one, and any useful reference image or
+              inspiration.
+            </p>
+          </details>
+          <details class="faq-item reveal">
+            <summary>Can you design for my niche?</summary>
+            <p>
+              Yes. I can design for gaming, AI, tech, finance, commentary, reactions, business, and other YouTube
+              content styles.
+            </p>
+          </details>
+          <details class="faq-item reveal">
+            <summary>What if I do not like the first version?</summary>
+            <p>No problem. You can request changes and I will refine the design so it matches your video better.</p>
+          </details>
+        </div>
+      </div>
     </section>
 
-    <section id="contact">
-        <div class="container">
-            <div class="section-header reveal">
-                <span class="section-kicker">Contact</span>
-                <h2 class="section-title">Ready to make your videos look more clickable?</h2>
-                <p class="section-subtitle">Choose the easiest way to reach me and let&rsquo;s start your next thumbnail.</p>
-            </div>
-            <div class="contact-card glass reveal">
-                <div class="contact-item">
-                    <small>&#128231; Mail</small>
-                    <a href="mailto:shahalamd293@gmail.com">shahalamd293@gmail.com</a>
-                    <span>Email me your project details</span>
-                </div>
-                <div class="contact-item">
-                    <small>&#128172; WhatsApp</small>
-                    <a href="https://wa.me/8801600106114" target="_blank" rel="noopener noreferrer">wa.me/8801600106114</a>
-                    <span>Quick chat for fast replies</span>
-                </div>
-                <div class="contact-item">
-                    <small>&#128722; Fiverr</small>
-                    <a href="https://www.fiverr.com/s/GzwyPyz" target="_blank" rel="noopener noreferrer">
-                        fiverr.com/s/GzwyPyz
-                    </a>
-                    <span>Order safely through Fiverr</span>
-                </div>
-            </div>
+    <section class="content-section" id="contact">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-kicker">Contact</span>
+          <h2 class="section-title">Ready to make your videos look more clickable?</h2>
+          <p class="section-subtitle">Choose the easiest way to reach me and let’s start your next thumbnail.</p>
         </div>
+        <div class="contact-card glass reveal">
+          <div class="contact-item">
+            <small>📧 Mail</small>
+            <a href="mailto:shahalamd293@gmail.com">shahalamd293@gmail.com</a>
+            <span>Email me your project details</span>
+          </div>
+          <div class="contact-item">
+            <small>💬 WhatsApp</small>
+            <a href="https://wa.me/8801600106114" target="_blank" rel="noopener noreferrer">wa.me/8801600106114</a>
+            <span>Quick chat for fast replies</span>
+          </div>
+          <div class="contact-item">
+            <small>🛒 Fiverr</small>
+            <a href="https://www.fiverr.com/s/GzwyPyz" target="_blank" rel="noopener noreferrer">
+              fiverr.com/s/GzwyPyz
+            </a>
+            <span>Order safely through Fiverr</span>
+          </div>
+        </div>
+      </div>
     </section>
 
     <div class="lightbox" id="lightbox" aria-hidden="true">
-        <div class="lightbox-inner">
-            <button class="lightbox-close" id="lightboxClose" aria-label="Close preview">&#10005;</button>
-            <div class="lightbox-frame"><img id="lightboxImage" src="" alt="Thumbnail preview"></div>
-        </div>
+      <div class="lightbox-inner">
+        <button class="lightbox-close" id="lightboxClose" aria-label="Close preview">✕</button>
+        <div class="lightbox-frame"><img id="lightboxImage" src="" alt="Thumbnail preview" /></div>
+      </div>
     </div>
 
-    <footer>Need a cleaner, stronger thumbnail? Let&rsquo;s work on it.</footer>
+    <footer>Need a cleaner, stronger thumbnail? Let’s work on it.</footer>
 
     <script>
-        const portfolioImages = Array.from({
-            length: 60
-        }, (_, i) => `output_webp/${i + 1}.webp`);
-        const beforeImages = Array.from({
-            length: 15
-        }, (_, i) => `before/${i + 1}.webp`);
-        const afterImages = Array.from({
-            length: 15
-        }, (_, i) => `after/${i + 1}.webp`);
+      const portfolioImages = Array.from({ length: 60 }, (_, i) => `output_webp/${i + 1}.webp`);
+      const beforeImages = Array.from({ length: 15 }, (_, i) => `before/${i + 1}.webp`);
+      const afterImages = Array.from({ length: 15 }, (_, i) => `after/${i + 1}.webp`);
 
-        const marqueeTrack = document.getElementById("marqueeTrack");
-        const mainGrid = document.getElementById("mainGrid");
-        const extraGrid = document.getElementById("extraGrid");
-        const beforeAfterGrid = document.getElementById("beforeAfterGrid");
+      const marqueeTrack = document.getElementById("marqueeTrack");
+      const mainGrid = document.getElementById("mainGrid");
+      const extraGrid = document.getElementById("extraGrid");
+      const beforeAfterGrid = document.getElementById("beforeAfterGrid");
 
-        function testImage(path) {
-            return new Promise((resolve) => {
-                const img = new Image();
-                img.onload = () => resolve(path);
-                img.onerror = () => resolve(null);
-                img.src = path;
-            });
-        }
+      const revealObserver = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("show");
+            revealObserver.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.12 });
 
-        function createThumb(path) {
-            const card = document.createElement("div");
-            card.className = "thumb";
-            card.setAttribute("role", "button");
-            card.setAttribute("tabindex", "0");
-            card.setAttribute("aria-label", "Open thumbnail preview");
-            const img = document.createElement("img");
-            img.src = path;
-            img.alt = "YouTube thumbnail design sample";
-            img.loading = "lazy";
-            img.decoding = "async";
-            card.appendChild(img);
-            return card;
-        }
+      function bindReveal(scope = document) {
+        scope.querySelectorAll(".reveal").forEach((el, index) => {
+          if (el.dataset.revealBound === "true") return;
+          el.dataset.revealBound = "true";
+          el.style.transitionDelay = `${Math.min(index * 0.04, 0.22)}s`;
+          revealObserver.observe(el);
+        });
+      }
 
-        function createCard(path, className) {
-            const card = document.createElement("article");
-            card.className = `${className} reveal`;
-            card.setAttribute("role", "button");
-            card.setAttribute("tabindex", "0");
-            card.setAttribute("aria-label", "Open thumbnail preview");
-            const img = document.createElement("img");
-            img.src = path;
-            img.alt = "Professional YouTube thumbnail portfolio sample";
-            img.loading = "lazy";
-            img.decoding = "async";
-            card.appendChild(img);
-            return card;
-        }
+      function makeImg(path, altText) {
+        const img = document.createElement("img");
+        img.src = path;
+        img.alt = altText;
+        img.loading = "lazy";
+        img.decoding = "async";
+        img.fetchPriority = "low";
+        return img;
+      }
 
-        function createBeforeAfterCard(beforeSrc, afterSrc) {
-            const card = document.createElement("article");
-            card.className = "ba-card reveal";
-            card.innerHTML = `
-        <div class="ba-base"><img src="${beforeSrc}" alt="Before thumbnail design" loading="lazy" decoding="async" draggable="false">
-        <div class="ba-overlay"><img src="${afterSrc}" alt="After thumbnail design" loading="lazy" decoding="async" draggable="false">
-        <div class="ba-divider">
-        <div class="ba-handle" aria-hidden="true">&harr;
-      `;
-            const overlay = card.querySelector(".ba-overlay");
-            const divider = card.querySelector(".ba-divider");
-            const handle = card.querySelector(".ba-handle");
-            const images = card.querySelectorAll("img");
-            let activePointerId = null;
-            let startX = 0;
-            let startY = 0;
-            let isDragging = false;
-            let dragLocked = false;
+      function createThumb(path) {
+        const card = document.createElement("div");
+        card.className = "thumb";
+        card.setAttribute("role", "button");
+        card.setAttribute("tabindex", "0");
+        card.setAttribute("aria-label", "Open thumbnail preview");
+        const img = makeImg(path, "YouTube thumbnail design sample");
+        img.addEventListener("error", () => card.remove(), { once: true });
+        card.appendChild(img);
+        return card;
+      }
 
-            images.forEach((img) => {
-                img.setAttribute("draggable", "false");
-                img.addEventListener("dragstart", (event) => event.preventDefault());
-            });
+      function createCard(path, className) {
+        const card = document.createElement("article");
+        card.className = `${className} reveal`;
+        card.setAttribute("role", "button");
+        card.setAttribute("tabindex", "0");
+        card.setAttribute("aria-label", "Open thumbnail preview");
+        const img = makeImg(path, "Professional YouTube thumbnail portfolio sample");
+        img.addEventListener("error", () => card.remove(), { once: true });
+        card.appendChild(img);
+        return card;
+      }
 
-            const setPosition = (clientX) => {
-                const rect = card.getBoundingClientRect();
-                let x = clientX - rect.left;
-                x = Math.max(0, Math.min(x, rect.width));
-                const percent = (x / rect.width) * 100;
-                const rightInset = 100 - percent;
-                overlay.style.clipPath = `inset(0 ${rightInset}% 0 0)`;
-                overlay.style.webkitClipPath = `inset(0 ${rightInset}% 0 0)`;
-                divider.style.left = `${percent}%`;
-                handle.style.left = `${percent}%`;
-            };
+      function createBeforeAfterCard(beforeSrc, afterSrc) {
+        const card = document.createElement("article");
+        card.className = "ba-card reveal";
+        card.innerHTML = `
+          <div class="ba-base"><img src="${beforeSrc}" alt="Before thumbnail design" loading="lazy" decoding="async" draggable="false"></div>
+          <div class="ba-overlay"><img src="${afterSrc}" alt="After thumbnail design" loading="lazy" decoding="async" draggable="false"></div>
+          <div class="ba-divider"></div>
+          <div class="ba-handle" aria-hidden="true">↔</div>
+        `;
 
-            const startPointer = (event) => {
-                activePointerId = event.pointerId;
-                startX = event.clientX;
-                startY = event.clientY;
-                isDragging = false;
-                dragLocked = false;
-            };
+        const overlay = card.querySelector(".ba-overlay");
+        const divider = card.querySelector(".ba-divider");
+        const handle = card.querySelector(".ba-handle");
+        const images = card.querySelectorAll("img");
+        let hasError = false;
 
-            const movePointer = (event) => {
-                if (activePointerId !== event.pointerId) return;
-                const dx = event.clientX - startX;
-                const dy = event.clientY - startY;
-                if (!dragLocked) {
-                    if (Math.abs(dx) > 8 || Math.abs(dy) > 8) {
-                        dragLocked = true;
-                        if (Math.abs(dx) > Math.abs(dy)) {
-                            isDragging = true;
-                            card.classList.add("is-dragging");
-                            card.setPointerCapture(event.pointerId);
-                        } else {
-                            activePointerId = null;
-                            return;
-                        }
-                    }
-                }
-                if (!isDragging) return;
-                event.preventDefault();
-                setPosition(event.clientX);
-            };
+        let activePointerId = null;
+        let startX = 0;
+        let startY = 0;
+        let isDragging = false;
+        let dragLocked = false;
 
-            const endPointer = (event) => {
-                if (activePointerId !== event.pointerId) return;
-                if (isDragging && card.hasPointerCapture(event.pointerId)) {
-                    card.releasePointerCapture(event.pointerId);
-                }
-                card.classList.remove("is-dragging");
+        images.forEach((img) => {
+          img.setAttribute("draggable", "false");
+          img.addEventListener("dragstart", (event) => event.preventDefault());
+          img.addEventListener("error", () => {
+            if (!hasError) {
+              hasError = true;
+              card.remove();
+            }
+          }, { once: true });
+        });
+
+        const setPosition = (clientX) => {
+          const rect = card.getBoundingClientRect();
+          let x = clientX - rect.left;
+          x = Math.max(0, Math.min(x, rect.width));
+          const percent = (x / rect.width) * 100;
+          const rightInset = 100 - percent;
+          overlay.style.clipPath = `inset(0 ${rightInset}% 0 0)`;
+          overlay.style.webkitClipPath = `inset(0 ${rightInset}% 0 0)`;
+          divider.style.left = `${percent}%`;
+          handle.style.left = `${percent}%`;
+        };
+
+        const startPointer = (event) => {
+          activePointerId = event.pointerId;
+          startX = event.clientX;
+          startY = event.clientY;
+          isDragging = false;
+          dragLocked = false;
+        };
+
+        const movePointer = (event) => {
+          if (activePointerId !== event.pointerId) return;
+          const dx = event.clientX - startX;
+          const dy = event.clientY - startY;
+          if (!dragLocked) {
+            if (Math.abs(dx) > 8 || Math.abs(dy) > 8) {
+              dragLocked = true;
+              if (Math.abs(dx) > Math.abs(dy)) {
+                isDragging = true;
+                card.classList.add("is-dragging");
+                card.setPointerCapture(event.pointerId);
+              } else {
                 activePointerId = null;
-                isDragging = false;
-                dragLocked = false;
-            };
-
-            card.addEventListener("pointerdown", startPointer, {
-                passive: true
-            });
-            card.addEventListener("pointermove", movePointer, {
-                passive: false
-            });
-            card.addEventListener("pointerup", endPointer);
-            card.addEventListener("pointercancel", endPointer);
-            card.addEventListener("lostpointercapture", () => {
-                activePointerId = null;
-                isDragging = false;
-                dragLocked = false;
-                card.classList.remove("is-dragging");
-            });
-            card.addEventListener("dragstart", (event) => event.preventDefault());
-            return card;
-        }
-
-        const observer = new IntersectionObserver(
-            (entries) => {
-                entries.forEach((entry) => {
-                    if (entry.isIntersecting) {
-                        entry.target.classList.add("show");
-                        observer.unobserve(entry.target);
-                    }
-                });
-            }, {
-                threshold: 0.12
-            },
-        );
-
-        function bindReveal() {
-            document.querySelectorAll(".reveal").forEach((el, index) => {
-                if (el.dataset.revealBound === "true") return;
-                el.dataset.revealBound = "true";
-                el.style.transitionDelay = `${Math.min(index * 0.04, 0.22)}s`;
-                observer.observe(el);
-            });
-        }
-
-        const lightbox = document.getElementById("lightbox");
-        const lightboxImage = document.getElementById("lightboxImage");
-        const lightboxClose = document.getElementById("lightboxClose");
-
-        function openLightbox(src) {
-            lightboxImage.src = src;
-            lightbox.classList.add("show");
-            lightbox.setAttribute("aria-hidden", "false");
-            document.body.style.overflow = "hidden";
-        }
-
-        function closeLightbox() {
-            lightbox.classList.remove("show");
-            lightbox.setAttribute("aria-hidden", "true");
-            lightboxImage.src = "";
-            document.body.style.overflow = "";
-        }
-
-        document.addEventListener("click", (e) => {
-            const media = e.target.closest(".thumb-card, .extra-card, .thumb");
-            if (media) {
-                const img = media.querySelector("img");
-                if (img) openLightbox(img.src);
+                return;
+              }
             }
-            if (e.target === lightbox) closeLightbox();
+          }
+          if (!isDragging) return;
+          event.preventDefault();
+          setPosition(event.clientX);
+        };
+
+        const endPointer = (event) => {
+          if (activePointerId !== event.pointerId) return;
+          if (isDragging && card.hasPointerCapture(event.pointerId)) {
+            card.releasePointerCapture(event.pointerId);
+          }
+          card.classList.remove("is-dragging");
+          activePointerId = null;
+          isDragging = false;
+          dragLocked = false;
+        };
+
+        card.addEventListener("pointerdown", startPointer, { passive: true });
+        card.addEventListener("pointermove", movePointer, { passive: false });
+        card.addEventListener("pointerup", endPointer);
+        card.addEventListener("pointercancel", endPointer);
+        card.addEventListener("lostpointercapture", () => {
+          activePointerId = null;
+          isDragging = false;
+          dragLocked = false;
+          card.classList.remove("is-dragging");
+        });
+        card.addEventListener("dragstart", (event) => event.preventDefault());
+        return card;
+      }
+
+      const lightbox = document.getElementById("lightbox");
+      const lightboxImage = document.getElementById("lightboxImage");
+      const lightboxClose = document.getElementById("lightboxClose");
+
+      function openLightbox(src) {
+        lightboxImage.src = src;
+        lightbox.classList.add("show");
+        lightbox.setAttribute("aria-hidden", "false");
+        document.body.style.overflow = "hidden";
+      }
+
+      function closeLightbox() {
+        lightbox.classList.remove("show");
+        lightbox.setAttribute("aria-hidden", "true");
+        lightboxImage.src = "";
+        document.body.style.overflow = "";
+      }
+
+      document.addEventListener("click", (e) => {
+        const media = e.target.closest(".thumb-card, .extra-card, .thumb");
+        if (media) {
+          const img = media.querySelector("img");
+          if (img) openLightbox(img.src);
+        }
+        if (e.target === lightbox) closeLightbox();
+      });
+
+      document.addEventListener("keydown", (e) => {
+        if (e.key === "Escape") closeLightbox();
+        const activeMedia = document.activeElement;
+        if ((e.key === "Enter" || e.key === " ") && activeMedia && activeMedia.matches(".thumb-card, .extra-card, .thumb")) {
+          e.preventDefault();
+          const img = activeMedia.querySelector("img");
+          if (img) openLightbox(img.src);
+        }
+      });
+
+      lightboxClose.addEventListener("click", closeLightbox);
+
+      function buildInitialPortfolio() {
+        if (marqueeTrack) {
+          marqueeTrack.innerHTML = "";
+          const sliderImages = portfolioImages.slice(0, 12);
+          [...sliderImages, ...sliderImages].forEach((path) => {
+            marqueeTrack.appendChild(createThumb(path));
+          });
+        }
+
+        if (mainGrid) {
+          mainGrid.innerHTML = "";
+          portfolioImages.slice(0, 6).forEach((path) => {
+            mainGrid.appendChild(createCard(path, "thumb-card"));
+          });
+          bindReveal(mainGrid);
+        }
+      }
+
+      function buildExtraPortfolio() {
+        if (!extraGrid || extraGrid.dataset.loaded === "true") return;
+        extraGrid.dataset.loaded = "true";
+        extraGrid.innerHTML = "";
+        portfolioImages.slice(6, 34).forEach((path) => {
+          extraGrid.appendChild(createCard(path, "extra-card"));
+        });
+        bindReveal(extraGrid);
+      }
+
+      function buildBeforeAfter() {
+        if (!beforeAfterGrid || beforeAfterGrid.dataset.loaded === "true") return;
+        beforeAfterGrid.dataset.loaded = "true";
+        beforeAfterGrid.innerHTML = "";
+        const pairCount = Math.min(beforeImages.length, afterImages.length);
+        for (let i = 0; i < pairCount; i++) {
+          beforeAfterGrid.appendChild(createBeforeAfterCard(beforeImages[i], afterImages[i]));
+        }
+        bindReveal(beforeAfterGrid);
+      }
+
+      function lazyBuildOnView(target, builder, rootMargin = "300px") {
+        if (!target) return;
+        const io = new IntersectionObserver((entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              builder();
+              io.disconnect();
+            }
+          });
+        }, { rootMargin });
+        io.observe(target);
+      }
+
+      document.addEventListener("DOMContentLoaded", () => {
+        bindReveal();
+        buildInitialPortfolio();
+        lazyBuildOnView(extraGrid, buildExtraPortfolio, "500px");
+        lazyBuildOnView(beforeAfterGrid, buildBeforeAfter, "400px");
+
+        document.querySelectorAll(".review-avatar").forEach((img) => {
+          img.addEventListener("error", () => {
+            const name = img.dataset.name || img.alt || "Creator";
+            const letter = (name.trim()[0] || "C").toUpperCase();
+            const svg = `<svg xmlns="http://www.w3.org/2000/svg" width="128" height="128" viewBox="0 0 128 128">
+              <defs>
+                <linearGradient id="g" x1="0" y1="0" x2="1" y2="1">
+                  <stop offset="0%" stop-color="#2b92b8"/>
+                  <stop offset="100%" stop-color="#4f46e5"/>
+                </linearGradient>
+              </defs>
+              <rect width="128" height="128" rx="64" fill="url(#g)"/>
+              <text x="50%" y="54%" dominant-baseline="middle" text-anchor="middle"
+                font-family="Arial, sans-serif" font-size="54" font-weight="700" fill="white">${letter}</text>
+            </svg>`;
+            img.src = "data:image/svg+xml;charset=UTF-8," + encodeURIComponent(svg);
+          }, { once: true });
         });
 
-        document.addEventListener("keydown", (e) => {
-            if (e.key === "Escape") closeLightbox();
-            const activeMedia = document.activeElement;
-            if (
-                (e.key === "Enter" || e.key === " ") &&
-                activeMedia &&
-                activeMedia.matches(".thumb-card, .extra-card, .thumb")
-            ) {
-                e.preventDefault();
-                const img = activeMedia.querySelector("img");
-                if (img) openLightbox(img.src);
-            }
-        });
+        const el = document.getElementById("rotatingTitle");
+        if (!el) return;
+        const texts = [
+          "Better thumbnails start with better presentation.",
+          "Clean design helps your videos look stronger before the click.",
+          "A stronger first impression can lead to better performance.",
+          "Clear thumbnails are easier to notice, understand, and click."
+        ];
 
-        lightboxClose.addEventListener("click", closeLightbox);
+        let textIndex = 0;
+        let charIndex = 0;
 
-        async function buildPortfolio() {
-            const checkedPortfolio = await Promise.all(portfolioImages.map(testImage));
-            const validPortfolio = checkedPortfolio.filter(Boolean);
-            const checkedBefore = await Promise.all(beforeImages.map(testImage));
-            const checkedAfter = await Promise.all(afterImages.map(testImage));
-            const validBefore = checkedBefore.filter(Boolean);
-            const validAfter = checkedAfter.filter(Boolean);
-            const sliderImages = validPortfolio.length ? validPortfolio : portfolioImages.slice(0, 8);
-
-            if (marqueeTrack) {
-                marqueeTrack.innerHTML = "";
-                [...sliderImages, ...sliderImages].forEach((path) => marqueeTrack.appendChild(createThumb(path)));
-            }
-            if (mainGrid) {
-                mainGrid.innerHTML = "";
-                (validPortfolio.length ? validPortfolio.slice(0, 6) : portfolioImages.slice(0, 6)).forEach((path) => {
-                    mainGrid.appendChild(createCard(path, "thumb-card"));
-                });
-            }
-            if (extraGrid) {
-                extraGrid.innerHTML = "";
-                (validPortfolio.length ? validPortfolio.slice(6, 34) : portfolioImages.slice(6, 33)).forEach((path) => {
-                    extraGrid.appendChild(createCard(path, "extra-card"));
-                });
-            }
-            if (beforeAfterGrid) {
-                beforeAfterGrid.innerHTML = "";
-                const pairCount = Math.min(validBefore.length, validAfter.length);
-                for (let i = 0; i < pairCount; i++) {
-                    beforeAfterGrid.appendChild(createBeforeAfterCard(validBefore[i], validAfter[i]));
-                }
-            }
-            bindReveal();
+        function typeTexts() {
+          const currentText = texts[textIndex];
+          if (charIndex < currentText.length) {
+            charIndex++;
+            el.textContent = currentText.slice(0, charIndex);
+            setTimeout(typeTexts, 48);
+            return;
+          }
+          if (textIndex < texts.length - 1) {
+            textIndex++;
+            charIndex = 0;
+            setTimeout(() => {
+              el.textContent = "";
+              typeTexts();
+            }, 900);
+            return;
+          }
+          el.classList.remove("typing-cursor");
         }
 
-        document.addEventListener("DOMContentLoaded", () => {
-            bindReveal();
-            buildPortfolio();
-            document.querySelectorAll(".review-avatar").forEach((img) => {
-                img.addEventListener(
-                    "error",
-                    () => {
-                        const name = img.dataset.name || "Creator";
-                        const letter = (name.trim()[0] || "C").toUpperCase();
-                        const svg = `<svg xmlns="http://www.w3.org/2000/svg" width="128" height="128" viewBox="0 0 128 128">
-            <defs>
-              <linearGradient id="g" x1="0" y1="0" x2="1" y2="1">
-                <stop offset="0%" stop-color="#2b92b8"/>
-                <stop offset="100%" stop-color="#4f46e5"/>
-              
-            
-            <rect width="128" height="128" rx="64" fill="url(#g)"/>
-            <text x="50%" y="54%" dominant-baseline="middle" text-anchor="middle"
-              font-family="Arial, sans-serif" font-size="54" font-weight="700" fill="white">${letter}
-          `;
-                        img.src = "data:image/svg+xml;charset=UTF-8," + encodeURIComponent(svg);
-                    }, {
-                        once: true
-                    },
-                );
-            });
-
-            const el = document.getElementById("rotatingTitle");
-            if (!el) return;
-            const texts = [
-                "Better thumbnails start with better presentation.",
-                "Clean design helps your videos look stronger before the click.",
-                "A stronger first impression can lead to better performance.",
-                "Clear thumbnails are easier to notice, understand, and click.",
-            ];
-            let textIndex = 0;
-            let charIndex = 0;
-
-            function typeTexts() {
-                const currentText = texts[textIndex];
-                if (charIndex < currentText.length) {
-                    charIndex++;
-                    el.textContent = currentText.slice(0, charIndex);
-                    setTimeout(typeTexts, 48);
-                    return;
-                }
-                if (textIndex < texts.length - 1) {
-                    textIndex++;
-                    charIndex = 0;
-                    setTimeout(() => {
-                        el.textContent = "";
-                        typeTexts();
-                    }, 900);
-                    return;
-                }
-                el.classList.remove("typing-cursor");
-            }
-            el.textContent = "";
-            typeTexts();
-        });
+        el.textContent = "";
+        typeTexts();
+      });
     </script>
-</body>
-
+  </body>
 </html>
