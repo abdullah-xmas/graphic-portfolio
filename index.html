@@ -43,6 +43,8 @@
       :root {
         --bg-1: #040713;
         --bg-2: #07101d;
+        --accent-1: #8bdcff;
+        --accent-2: #8b5cf6;
         --bg-3: #0b1220;
         --panel: rgba(255, 255, 255, 0.055);
         --line: rgba(255, 255, 255, 0.1);
@@ -68,11 +70,7 @@
         min-height: 100vh;
         font-family: "Plus Jakarta Sans", system-ui, Arial, sans-serif;
         color: var(--text);
-        background:
-          radial-gradient(circle at 12% 8%, rgba(139, 220, 255, 0.13), transparent 18%),
-          radial-gradient(circle at 88% 14%, rgba(139, 92, 246, 0.18), transparent 24%),
-          radial-gradient(circle at 50% 76%, rgba(59, 130, 246, 0.08), transparent 22%),
-          linear-gradient(180deg, var(--bg-1) 0%, var(--bg-2) 45%, var(--bg-1) 100%);
+        background: var(--bg-1);
         overflow-x: hidden;
         line-height: 1.65;
         -webkit-font-smoothing: antialiased;
@@ -82,25 +80,25 @@
       body::after {
         content: "";
         position: fixed;
-        width: 340px;
-        height: 340px;
+        width: 45vw;
+        height: 45vw;
         border-radius: 50%;
         pointer-events: none;
-        opacity: 0.16;
-        filter: blur(72px);
+        opacity: 0.1;
+        filter: blur(100px);
         z-index: 0;
       }
       body::before {
-        top: -80px;
-        left: -90px;
-        background: linear-gradient(135deg, rgba(139, 220, 255, 0.85), transparent 45%);
-        animation: blobFloat 16s ease-in-out infinite;
+        top: -10%;
+        left: -10%;
+        background: linear-gradient(135deg, var(--accent-1), transparent);
+        animation: blobFloat 20s ease-in-out infinite alternate;
       }
       body::after {
-        right: -110px;
-        bottom: -30px;
-        background: linear-gradient(135deg, rgba(139, 92, 246, 0.9), transparent 40%);
-        animation: blobFloat 20s ease-in-out infinite reverse;
+        right: -10%;
+        bottom: -5%;
+        background: linear-gradient(135deg, var(--accent-2), transparent);
+        animation: blobFloat 25s ease-in-out infinite alternate-reverse;
       }
       img {
         display: block;
@@ -397,10 +395,17 @@
         line-height: 1.08;
         text-wrap: balance;
       }
-      .typing-cursor::after {
+      .typed-wrapper {
+        display: inline-block;
+        position: relative;
+        color: #8bdcff;
+      }
+      .typed-wrapper::after {
         content: "|";
-        margin-left: 4px;
-        animation: blink 1s infinite;
+        animation: blink 1s step-start infinite;
+        color: #fff;
+        margin-left: 2px;
+        font-weight: 400;
       }
       .portfolio-subtitle {
         max-width: 620px;
@@ -1291,11 +1296,11 @@
       <div class="container">
         <div class="section-header reveal portfolio-header">
           <span class="section-kicker">Portfolio</span>
-          <h2 class="section-title portfolio-title typing-cursor" id="rotatingTitle">
-            Better thumbnails start with better presentation.
+          <h2 class="section-title portfolio-title">
+            More clicks start with <br /><span class="typed-wrapper" id="typedText">cleaner design.</span>
           </h2>
           <p class="section-subtitle portfolio-subtitle">
-            A clean showcase of work designed to stop scrolling and earn more clicks.
+            A curated selection of designs built to capture attention and make viewers want to click.
           </p>
         </div>
         <div class="slider-card glass reveal">
@@ -1305,7 +1310,7 @@
               <span class="dot"></span>
               <span class="dot"></span>
             </div>
-            <div class="window-chip">Selected work</div>
+            <div class="window-chip">Recent Work</div>
           </div>
           <div class="slider-shell">
             <div class="fade-left"></div>
@@ -1532,7 +1537,7 @@
           </div>
           <div class="contact-item">
             <small>🛒 Fiverr</small>
-            <a href="https://www.fiverr.com/s/xX0N3z4" target="_blank" rel="noopener noreferrer">
+            <a href="https://www.fiverr.com/s/jjY9z9L" target="_blank" rel="noopener noreferrer">
               fiverr.com/s/GzwyPyz
             </a>
             <span>Order safely through Fiverr</span>
@@ -1881,41 +1886,39 @@ function buildInitialPortfolio() {
             img.src = "data:image/svg+xml;charset=UTF-8," + encodeURIComponent(svg);
           }, { once: true });
         });
+        const typedEl = document.getElementById("typedText");
+        if (typedEl) {
+          const words = ["cleaner design.", "better contrast.", "a stronger hook.", "clear visuals."];
+          let wordIndex = 0;
+          let charIndex = words[0].length;
+          let isDeleting = true;
 
-        const el = document.getElementById("rotatingTitle");
-        if (!el) return;
-        const texts = [
-          "Better thumbnails start with better presentation.",
-          "Clean design helps your videos look stronger before the click.",
-          "A stronger first impression can lead to better performance.",
-          "Clear thumbnails are easier to notice, understand, and click."
-        ];
+          function typeEffect() {
+            const currentWord = words[wordIndex];
+            if (isDeleting) {
+              typedEl.textContent = currentWord.substring(0, charIndex - 1);
+              charIndex--;
+            } else {
+              typedEl.textContent = currentWord.substring(0, charIndex + 1);
+              charIndex++;
+            }
 
-        let textIndex = 0;
-        let charIndex = 0;
+            let typingSpeed = isDeleting ? 50 : 100;
 
-        function typeTexts() {
-          const currentText = texts[textIndex];
-          if (charIndex < currentText.length) {
-            charIndex++;
-            el.textContent = currentText.slice(0, charIndex);
-            setTimeout(typeTexts, 48);
-            return;
+            if (!isDeleting && charIndex === currentWord.length) {
+              typingSpeed = 2500;
+              isDeleting = true;
+            } else if (isDeleting && charIndex === 0) {
+              isDeleting = false;
+              wordIndex = (wordIndex + 1) % words.length;
+              typingSpeed = 500;
+            }
+
+            setTimeout(typeEffect, typingSpeed);
           }
-          if (textIndex < texts.length - 1) {
-            textIndex++;
-            charIndex = 0;
-            setTimeout(() => {
-              el.textContent = "";
-              typeTexts();
-            }, 900);
-            return;
-          }
-          el.classList.remove("typing-cursor");
+
+          setTimeout(typeEffect, 2000);
         }
-
-        el.textContent = "";
-        typeTexts();
       });
     </script>
   </body>
