@@ -370,8 +370,13 @@
         transition:transform .35s ease,filter .35s ease;
       }
       .thumb:hover{transform:translateY(-4px) scale(1.015);filter:saturate(1.08) contrast(1.04)}
-      @keyframes portfolioSlide{0%{transform:translate3d(0,0,0)}100%{transform:translate3d(-50%,0,0)}}100%{transform:translate3d(-50%,0,0)}}
-        100%{transform:translate3d(calc(-50% - 9px),0,0)}
+      @keyframes portfolioSlide {
+       0% {
+        transform: translate3d(0, 0, 0);
+         }
+       100% {
+        transform: translate3d(calc(-50% - 9px), 0, 0);
+        }
       }
 
       /* premium motion */
