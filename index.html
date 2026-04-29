@@ -132,6 +132,7 @@
         a {
             text-decoration: none;
             color: inherit;
+            touch-action: manipulation;
         }
 
         body.menu-open {
@@ -1153,7 +1154,7 @@
         }
 
         .review-proof:hover .rp-img {
-            transform: translateZ(0) scale(1.006);
+            transform: translateZ(0);
             filter: none;
             opacity: 1;
         }
@@ -2578,6 +2579,391 @@
             }
         }
 
+    
+        /* Final mobile smoothness polish */
+        @media (max-width: 760px) {
+            html {
+                scroll-padding-top: 86px;
+            }
+
+            .reveal {
+                transform: translate3d(0, 22px, 0);
+                transition:
+                    opacity 0.95s cubic-bezier(0.16, 1, 0.3, 1),
+                    transform 0.95s cubic-bezier(0.16, 1, 0.3, 1);
+                will-change: opacity, transform;
+            }
+
+            .reveal.fade-left,
+            .reveal.fade-right,
+            .reveal.zoom-in {
+                transform: translate3d(0, 22px, 0);
+            }
+
+            .reveal.show,
+            .reveal.fade-left.show,
+            .reveal.fade-right.show,
+            .reveal.zoom-in.show {
+                transform: translate3d(0, 0, 0);
+            }
+
+            .hero-visual {
+                animation-duration: 9s;
+            }
+
+            .thumb-card:hover,
+            .process-card:hover,
+            .review-proof:hover,
+            .faq-item:hover,
+            .ci:hover,
+            .btn:hover,
+            .btn-outline:hover,
+            .btn-whatsapp:hover,
+            .nav-cta:hover {
+                transform: translateY(-2px);
+            }
+
+            .marquee-track {
+                animation-duration: 72s !important;
+            }
+        }
+
+        @media (max-width: 520px) {
+            .reveal {
+                transform: translate3d(0, 18px, 0);
+                transition-duration: 0.85s;
+            }
+
+            .reveal.fade-left,
+            .reveal.fade-right,
+            .reveal.zoom-in {
+                transform: translate3d(0, 18px, 0);
+            }
+
+            .btn::after,
+            .btn-outline::after,
+            .btn-whatsapp::after,
+            .nav-cta::after {
+                transition-duration: 0.75s;
+            }
+        }
+
+    
+        /* Thumbnail preview popup disabled */
+        .lightbox,
+        .lb-prev,
+        .lb-next,
+        .lb-close {
+            display: none !important;
+            visibility: hidden !important;
+            pointer-events: none !important;
+        }
+
+        .thumb,
+        .thumb-card {
+            cursor: default !important;
+        }
+
+    
+        .thumb img,
+        .thumb-card img {
+            image-rendering: auto !important;
+            transform: translateZ(0);
+            backface-visibility: hidden;
+        }
+        /* Final clean navbar logo */
+        .brand {
+            gap: 10px;
+        }
+
+        .brand-mark {
+            width: 34px;
+            height: 34px;
+            min-width: 34px;
+            min-height: 34px;
+            padding: 0 !important;
+            background: transparent !important;
+            border: none !important;
+            box-shadow: none !important;
+            border-radius: 0 !important;
+            overflow: visible !important;
+            display: grid;
+            place-items: center;
+            flex: 0 0 auto;
+        }
+
+        .brand-mark img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain !important;
+            object-position: center;
+            border-radius: 0 !important;
+            background: transparent !important;
+            image-rendering: auto;
+            box-shadow: none !important;
+            filter: none !important;
+            display: block;
+        }
+
+        @media (max-width: 520px) {
+            .brand {
+                gap: 8px;
+            }
+
+            .brand-mark {
+                width: 30px;
+                height: 30px;
+                min-width: 30px;
+                min-height: 30px;
+            }
+        }
+
+    
+        /* Final scroll smoothness optimization */
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            overscroll-behavior-y: none;
+        }
+
+        .topbar,
+        .nav,
+        .scroll-progress,
+        .hero-visual,
+        .marquee-track,
+        .thumb,
+        .thumb-card,
+        .review-proof,
+        .process-card,
+        .proof-cell,
+        .faq-item,
+        .ba-card,
+        .btn,
+        .btn-outline,
+        .btn-whatsapp,
+        .nav-cta {
+            backface-visibility: hidden;
+            transform: translateZ(0);
+        }
+
+        .scroll-progress {
+            will-change: transform;
+        }
+
+        .topbar {
+            will-change: transform;
+        }
+
+        .reveal {
+            will-change: opacity, transform;
+        }
+
+        section {
+            content-visibility: auto;
+            contain-intrinsic-size: 1px 900px;
+        }
+
+        .hero,
+        .topbar,
+        .contact-page,
+        .mob-menu {
+            content-visibility: visible;
+            contain-intrinsic-size: auto;
+        }
+
+        @media (max-width: 760px) {
+            body::before,
+            body::after {
+                display: none;
+            }
+
+            .nav,
+            .slider-shell,
+            .glass,
+            .process-card,
+            .review-proof,
+            .faq-item,
+            .contact-brief,
+            .contact-card {
+                backdrop-filter: none;
+                -webkit-backdrop-filter: none;
+            }
+
+            .hero-visual {
+                animation: none;
+            }
+
+            .marquee-track {
+                animation-duration: 85s !important;
+            }
+
+            .reveal {
+                transition:
+                    opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1),
+                    transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+            }
+        }
+
+        @media (max-width: 520px) {
+            .btn::after,
+            .btn-outline::after,
+            .btn-whatsapp::after,
+            .nav-cta::after {
+                display: none;
+            }
+        }
+
+    
+        /* Final navbar brand spacing fix */
+        .brand {
+            align-items: center;
+            gap: 8px !important;
+        }
+
+        .brand-mark {
+            width: 32px !important;
+            height: 32px !important;
+            min-width: 32px !important;
+            min-height: 32px !important;
+        }
+
+        .brand-text {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            gap: 2px;
+            min-width: 0;
+            line-height: 1;
+        }
+
+        .brand-text strong {
+            margin: 0;
+            font-size: 0.95rem !important;
+            line-height: 1.02 !important;
+            letter-spacing: -0.03em;
+        }
+
+        .brand-text span {
+            margin: 0;
+            font-size: 0.72rem !important;
+            line-height: 1.05 !important;
+            color: var(--muted);
+        }
+
+        @media (max-width: 520px) {
+            .brand {
+                gap: 7px !important;
+            }
+
+            .brand-mark {
+                width: 28px !important;
+                height: 28px !important;
+                min-width: 28px !important;
+                min-height: 28px !important;
+            }
+
+            .brand-text {
+                gap: 1px;
+            }
+
+            .brand-text strong {
+                font-size: 0.88rem !important;
+            }
+
+            .brand-text span {
+                font-size: 0.68rem !important;
+            }
+        }
+
+        @media (max-width: 390px) {
+            .brand {
+                gap: 6px !important;
+            }
+
+            .brand-mark {
+                width: 26px !important;
+                height: 26px !important;
+                min-width: 26px !important;
+                min-height: 26px !important;
+            }
+
+            .brand-text strong {
+                font-size: 0.82rem !important;
+            }
+
+            .brand-text span {
+                display: none !important;
+            }
+        }
+
+    
+        /* Final review thumbnail quality fix */
+        .rp-img {
+            width: calc(100% - 20px);
+            margin: 0 10px 10px;
+            aspect-ratio: 16 / 9;
+            object-fit: cover;
+            object-position: center;
+            display: block;
+            pointer-events: none;
+            image-rendering: auto !important;
+            -webkit-backface-visibility: hidden;
+            backface-visibility: hidden;
+            transform: translateZ(0);
+            filter: none !important;
+            opacity: 1 !important;
+            border-radius: 15px;
+            border: none !important;
+            box-shadow: none !important;
+            background: transparent;
+        }
+
+        .review-proof:hover .rp-img {
+            transform: translateZ(0);
+            filter: none !important;
+            opacity: 1 !important;
+            box-shadow: none !important;
+        }
+
+    
+        /* Final WhatsApp CTA highlight */
+        .btn-whatsapp {
+            background:
+                radial-gradient(circle at 18% 20%, rgba(37, 211, 102, 0.22), transparent 34%),
+                linear-gradient(135deg, rgba(37, 211, 102, 0.18), rgba(139, 220, 255, 0.08)),
+                rgba(255, 255, 255, 0.06) !important;
+            border-color: rgba(37, 211, 102, 0.42) !important;
+            box-shadow:
+                0 16px 38px rgba(37, 211, 102, 0.12),
+                inset 0 1px 0 rgba(255, 255, 255, 0.12) !important;
+            color: #ffffff !important;
+        }
+
+        .btn-whatsapp:hover {
+            background:
+                radial-gradient(circle at 18% 20%, rgba(37, 211, 102, 0.28), transparent 34%),
+                linear-gradient(135deg, rgba(37, 211, 102, 0.24), rgba(139, 220, 255, 0.1)),
+                rgba(255, 255, 255, 0.075) !important;
+            border-color: rgba(37, 211, 102, 0.62) !important;
+            box-shadow:
+                0 22px 52px rgba(37, 211, 102, 0.16),
+                inset 0 1px 0 rgba(255, 255, 255, 0.14) !important;
+        }
+
+        .btn-whatsapp .element-logo-icon {
+            filter: drop-shadow(0 0 10px rgba(37, 211, 102, 0.35));
+        }
+
+        @media (max-width: 520px) {
+            .btn-whatsapp {
+                box-shadow:
+                    0 12px 28px rgba(37, 211, 102, 0.1),
+                    inset 0 1px 0 rgba(255, 255, 255, 0.1) !important;
+            }
+        }
+
     </style>
 </head>
 
@@ -2589,7 +2975,7 @@
             <nav class="nav">
                 <div class="brand">
                     <div class="brand-mark">
-                        <img src="elements/Logo.png" alt="Abdullah Thumbnails Logo" onerror="this.style.display='none'; this.parentElement.style.background='linear-gradient(135deg,rgba(139,220,255,.9),rgba(167,139,250,.85))';" loading="lazy">
+                        <img src="elements/Logo.png" alt="Abdullah Thumbnails Logo" onerror="this.style.display='none'; this.parentElement.style.background='linear-gradient(135deg,rgba(139,220,255,.9),rgba(167,139,250,.85))';" decoding="async">
                     </div>
                     <div class="brand-text">
                         <strong>Abdullah Al Mamun</strong>
@@ -2802,11 +3188,11 @@
                 <div class="review-grid">
                     <a class="review-proof" href="https://www.youtube.com/@jackpembrook/videos" target="_blank" rel="noopener noreferrer" aria-label="Open Jack Pembrook YouTube channel">
                         <div class="rp-top">
-                            <img class="rp-avatar" src="reviews/jack.webp" alt="Jack Pembrook avatar" onerror="this.src = makeAvatar('J')" loading="lazy">
+                            <img class="rp-avatar" src="reviews/jack.webp" alt="Jack Pembrook avatar" onerror="this.src = makeAvatar('J')" loading="lazy" decoding="async">
                             <div class="rp-meta">
                                 <div class="rp-name">
                                     Jack Pembrook
-                                    <img class="verify-badge" src="reviews/verified-badge.png" alt="Verified" onerror="this.style.display = 'none'" loading="lazy">
+                                    <img class="verify-badge" src="reviews/verified-badge.png" alt="Verified" onerror="this.style.display = 'none'" loading="lazy" decoding="async">
                                 </div>
                                 <div class="rp-role">YouTuber &middot; 1.69M Subscribers</div>
                                 <div class="rp-niche">Storytelling / Entertainment niche</div>
@@ -2822,11 +3208,11 @@
 
                     <a class="review-proof" href="https://www.youtube.com/@SabriSubyOfficial/videos" target="_blank" rel="noopener noreferrer" aria-label="Open Sabri Suby YouTube channel">
                         <div class="rp-top">
-                            <img class="rp-avatar" src="reviews/sabri.webp" alt="Sabri Suby avatar" onerror="this.src = makeAvatar('S')" loading="lazy">
+                            <img class="rp-avatar" src="reviews/sabri.webp" alt="Sabri Suby avatar" onerror="this.src = makeAvatar('S')" loading="lazy" decoding="async">
                             <div class="rp-meta">
                                 <div class="rp-name">
                                     Sabri Suby
-                                    <img class="verify-badge" src="reviews/verified-badge.png" alt="Verified" onerror="this.style.display = 'none'" loading="lazy">
+                                    <img class="verify-badge" src="reviews/verified-badge.png" alt="Verified" onerror="this.style.display = 'none'" loading="lazy" decoding="async">
                                 </div>
                                 <div class="rp-role">YouTuber &middot; 448K Subscribers</div>
                                 <div class="rp-niche">Business / Marketing niche</div>
@@ -2842,11 +3228,11 @@
 
                     <a class="review-proof" href="https://www.youtube.com/@vfxsolazzo/videos" target="_blank" rel="noopener noreferrer" aria-label="Open Solazzo YouTube channel">
                         <div class="rp-top">
-                            <img class="rp-avatar" src="reviews/solazzo.webp" alt="Solazzo avatar" onerror="this.src = makeAvatar('S')" loading="lazy">
+                            <img class="rp-avatar" src="reviews/solazzo.webp" alt="Solazzo avatar" onerror="this.src = makeAvatar('S')" loading="lazy" decoding="async">
                             <div class="rp-meta">
                                 <div class="rp-name">
                                     Solazzo
-                                    <img class="verify-badge" src="reviews/verified-badge.png" alt="Verified" onerror="this.style.display = 'none'" loading="lazy">
+                                    <img class="verify-badge" src="reviews/verified-badge.png" alt="Verified" onerror="this.style.display = 'none'" loading="lazy" decoding="async">
                                 </div>
                                 <div class="rp-role">YouTuber &middot; 12.2K Subscribers</div>
                                 <div class="rp-niche">VFX / Entertainment niche</div>
@@ -2866,11 +3252,11 @@
 
                     <a class="review-proof" href="https://www.youtube.com/@TechSource/videos" target="_blank" rel="noopener noreferrer" aria-label="Open TechSource YouTube channel">
                         <div class="rp-top">
-                            <img class="rp-avatar" src="reviews/techsource.webp" alt="TechSource avatar" onerror="this.src = makeAvatar('T')" loading="lazy">
+                            <img class="rp-avatar" src="reviews/techsource.webp" alt="TechSource avatar" onerror="this.src = makeAvatar('T')" loading="lazy" decoding="async">
                             <div class="rp-meta">
                                 <div class="rp-name">
                                     TechSource
-                                    <img class="verify-badge" src="reviews/verified-badge.png" alt="Verified" onerror="this.style.display = 'none'" loading="lazy">
+                                    <img class="verify-badge" src="reviews/verified-badge.png" alt="Verified" onerror="this.style.display = 'none'" loading="lazy" decoding="async">
                                 </div>
                                 <div class="rp-role">YouTuber &middot; 4.07M Subscribers</div>
                                 <div class="rp-niche">Tech / Product niche</div>
@@ -3046,15 +3432,15 @@
                     </div>
                     <div class="contact-btns">
                         <a class="btn" href="https://www.fiverr.com/s/WEy43KL" target="_blank" rel="noopener noreferrer">
-                            <img class="element-logo-icon" src="elements/Fiverr.png" alt="Fiverr" loading="lazy">
+                            <img class="element-logo-icon" src="elements/Fiverr.png" alt="Fiverr" loading="lazy" decoding="async">
                             Secure Fiverr Order
                         </a>
                         <a class="btn-whatsapp" href="https://wa.me/8801600106114" target="_blank" rel="noopener noreferrer">
-                            <img class="element-logo-icon" src="elements/whatsapp.png" alt="WhatsApp" loading="lazy">
+                            <img class="element-logo-icon" src="elements/whatsapp.png" alt="WhatsApp" loading="lazy" decoding="async">
                             <span>Message Me on WhatsApp</span>
                         </a>
                         <a class="btn-outline open-contact-form" href="#email-contact">
-                            <img class="element-logo-icon" src="elements/Mail.png" alt="Email" loading="lazy">
+                            <img class="element-logo-icon" src="elements/Mail.png" alt="Email" loading="lazy" decoding="async">
                             Send Project Details
                         </a>
                     </div>
@@ -3142,7 +3528,7 @@
     <div class="lightbox" id="lightbox" aria-hidden="true" role="dialog" aria-label="Portfolio thumbnail preview">
         <button class="lb-close" id="lbClose" type="button" aria-label="Close preview">&times;</button>
         <button class="lb-prev" id="lbPrev" type="button" aria-label="Previous thumbnail">&#8249;</button>
-        <img class="lightbox-img" id="lbImg" src="" alt="Expanded YouTube thumbnail design preview" loading="lazy">
+        <img class="lightbox-img" id="lbImg" src="" alt="Expanded YouTube thumbnail design preview" loading="lazy" decoding="async">
         <button class="lb-next" id="lbNext" type="button" aria-label="Next thumbnail">&#8250;</button>
         <div class="lb-counter" id="lbCounter">1 / 1</div>
     </div>
@@ -3177,8 +3563,11 @@
         const topbar = document.querySelector(".topbar");
 
         function revealNow(el) {
-            el.classList.add("show");
             el.style.transitionDelay = el.dataset.delay || "0s";
+            el.classList.add("show");
+            window.setTimeout(() => {
+                el.style.transitionDelay = "";
+            }, window.matchMedia("(max-width: 760px)").matches ? 1100 : 1450);
         }
 
         const revealObs =
@@ -3192,8 +3581,8 @@
                         }
                     });
                 }, {
-                    threshold: 0.12,
-                    rootMargin: "0px 0px -56px 0px",
+                    threshold: 0.08,
+                    rootMargin: "0px 0px -6% 0px",
                 },
             ) :
             null;
@@ -3203,7 +3592,10 @@
             items.forEach((el, i) => {
                 if (el.dataset.rb === "1") return;
                 el.dataset.rb = "1";
-                el.dataset.delay = `${Math.min((i % 8) * 0.055, 0.34)}s`;
+                const isSmallScreen = window.matchMedia("(max-width: 760px)").matches;
+                const step = isSmallScreen ? 0.025 : 0.055;
+                const cap = isSmallScreen ? 0.12 : 0.28;
+                el.dataset.delay = `${Math.min((i % 8) * step, cap)}s`;
                 if (revealObs) {
                     revealObs.observe(el);
                 } else {
@@ -3232,11 +3624,21 @@
             if (scrollProgress) scrollProgress.style.transform = `scaleX(${progress})`;
             if (topbar) topbar.classList.toggle("is-scrolled", scrollTop > 10);
         }
+        let scrollTicking = false;
+
+        function requestScrollUIUpdate() {
+            if (scrollTicking) return;
+            scrollTicking = true;
+
+            window.requestAnimationFrame(() => {
+                updateScrollUI();
+                scrollTicking = false;
+            });
+        }
+
         updateScrollUI();
-        window.addEventListener("scroll", updateScrollUI, {
-            passive: true
-        });
-        window.addEventListener("resize", updateScrollUI);
+        window.addEventListener("scroll", requestScrollUIUpdate, { passive: true });
+        window.addEventListener("resize", requestScrollUIUpdate, { passive: true });
 
         // &#9472;&#9472; SMARTPHONE / TABLET NAV + SMOOTH SECTION SCROLL &#9472;&#9472;
         const navToggle = document.getElementById("navToggle");
@@ -3501,30 +3903,11 @@
         const lbNext = document.getElementById("lbNext");
         const lbCounter = document.getElementById("lbCounter");
 
-        function updateLightbox() {
-            if (!lbImg || !lbImages.length) return;
-            lbIdx = (lbIdx + lbImages.length) % lbImages.length;
-            lbImg.src = lbImages[lbIdx];
-            lbImg.alt = `Expanded YouTube thumbnail design sample ${lbIdx + 1} by Abdullah Al Mamun`;
-            if (lbCounter) lbCounter.textContent = `${lbIdx + 1} / ${lbImages.length}`;
-        }
+        function updateLightbox() { return false; }
 
-        function openLightbox(idx) {
-            if (!lightbox || !lbImages.length) return;
-            lbIdx = Math.max(0, Math.min(idx, lbImages.length - 1));
-            updateLightbox();
-            lightbox.classList.add("open");
-            lightbox.setAttribute("aria-hidden", "false");
-            document.body.classList.add("menu-open");
-        }
+        function openLightbox() { return false; }
 
-        function closeLightbox() {
-            if (!lightbox) return;
-            lightbox.classList.remove("open");
-            lightbox.setAttribute("aria-hidden", "true");
-            document.body.classList.remove("menu-open");
-            if (lbImg) lbImg.removeAttribute("src");
-        }
+        function closeLightbox() { return false; }
 
         function moveLightbox(step) {
             if (!lightbox?.classList.contains("open")) return;
