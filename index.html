@@ -2964,6 +2964,317 @@
             }
         }
 
+    
+        /* Contact form success/error message */
+        .contact-form-status {
+            grid-column: 1 / -1;
+            display: none;
+            margin-top: 4px;
+            padding: 14px 16px;
+            border-radius: 12px;
+            background: rgba(139, 220, 255, 0.08);
+            border: 1px solid rgba(139, 220, 255, 0.18);
+            color: #dcecff;
+            font-size: 0.92rem;
+            line-height: 1.65;
+            text-align: center;
+        }
+
+        .contact-form-status.show {
+            display: block;
+        }
+
+        .contact-form-status.success {
+            background: rgba(37, 211, 102, 0.09);
+            border-color: rgba(37, 211, 102, 0.24);
+            color: #e7fff0;
+        }
+
+        .contact-form-status.error {
+            background: rgba(255, 95, 87, 0.09);
+            border-color: rgba(255, 95, 87, 0.24);
+            color: #ffe9e7;
+        }
+
+        .contact-form button[disabled] {
+            cursor: wait;
+            opacity: 0.72;
+            transform: none;
+        }
+
+
+        /* Keep review thumbnails clean and untouched */
+        .rp-img,
+        .review-proof:hover .rp-img {
+            transform: translateZ(0) !important;
+            filter: none !important;
+            opacity: 1 !important;
+            image-rendering: auto !important;
+        }
+
+        /* Clean navbar logo fit */
+        .brand {
+            gap: 8px !important;
+            align-items: center !important;
+        }
+
+        .brand-mark {
+            width: 32px !important;
+            height: 32px !important;
+            min-width: 32px !important;
+            min-height: 32px !important;
+            padding: 0 !important;
+            background: transparent !important;
+            border: 0 !important;
+            box-shadow: none !important;
+            border-radius: 0 !important;
+            overflow: visible !important;
+        }
+
+        .brand-mark img {
+            width: 100% !important;
+            height: 100% !important;
+            object-fit: contain !important;
+            object-position: center !important;
+            border: 0 !important;
+            border-radius: 0 !important;
+            background: transparent !important;
+            box-shadow: none !important;
+            filter: none !important;
+            image-rendering: auto !important;
+        }
+
+        .brand-text {
+            display: flex !important;
+            flex-direction: column !important;
+            justify-content: center !important;
+            gap: 1px !important;
+            line-height: 1 !important;
+        }
+
+        .brand-text strong {
+            margin: 0 !important;
+            line-height: 1.05 !important;
+        }
+
+        .brand-text span {
+            margin: 0 !important;
+            line-height: 1.08 !important;
+        }
+
+        /* Mobile: smoother, lighter, less stutter */
+        @media (max-width: 760px) {
+            .reveal {
+                transform: translate3d(0, 22px, 0);
+                transition:
+                    opacity 0.85s var(--motion-premium),
+                    transform 0.85s var(--motion-premium);
+            }
+
+            .reveal.fade-left,
+            .reveal.fade-right,
+            .reveal.zoom-in {
+                transform: translate3d(0, 22px, 0);
+            }
+
+            .reveal.show,
+            .reveal.fade-left.show,
+            .reveal.fade-right.show,
+            .reveal.zoom-in.show {
+                transform: translate3d(0, 0, 0);
+            }
+
+            .hero-visual {
+                animation: none !important;
+            }
+
+            .marquee-track {
+                animation-duration: 82s !important;
+            }
+
+            .thumb:hover,
+            .thumb-card:hover,
+            .review-proof:hover,
+            .process-card:hover,
+            .faq-item:hover,
+            .btn:hover,
+            .btn-outline:hover,
+            .btn-whatsapp:hover {
+                transform: translate3d(0, -2px, 0);
+            }
+        }
+
+        @media (max-width: 520px) {
+            .brand {
+                gap: 7px !important;
+            }
+
+            .brand-mark {
+                width: 28px !important;
+                height: 28px !important;
+                min-width: 28px !important;
+                min-height: 28px !important;
+            }
+
+            .brand-text strong {
+                font-size: 0.86rem !important;
+            }
+
+            .brand-text span {
+                font-size: 0.66rem !important;
+            }
+
+            .btn::after,
+            .btn-outline::after,
+            .btn-whatsapp::after,
+            .nav-cta::after {
+                display: none;
+            }
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            .reveal {
+                transition-duration: 0.35s !important;
+            }
+
+            .hero-visual,
+            .marquee-track {
+                animation-play-state: paused !important;
+            }
+        }
+
+
+    
+        /* Final balanced premium animation tuning */
+        :root {
+            --motion-premium: cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        .reveal {
+            opacity: 0;
+            transform: translate3d(0, 30px, 0) scale(0.992);
+            transition:
+                opacity 2.15s var(--motion-premium),
+                transform 2.15s var(--motion-premium);
+            will-change: opacity, transform;
+        }
+
+        .reveal.show {
+            opacity: 1;
+            transform: translate3d(0, 0, 0) scale(1);
+        }
+
+        .reveal.fade-left {
+            transform: translate3d(-24px, 20px, 0) scale(0.992);
+        }
+
+        .reveal.fade-right {
+            transform: translate3d(24px, 20px, 0) scale(0.992);
+        }
+
+        .reveal.zoom-in {
+            transform: translate3d(0, 20px, 0) scale(0.978);
+        }
+
+        .reveal.fade-left.show,
+        .reveal.fade-right.show,
+        .reveal.zoom-in.show {
+            transform: translate3d(0, 0, 0) scale(1);
+        }
+
+        .btn,
+        .btn-outline,
+        .btn-whatsapp,
+        .nav-cta,
+        .load-more,
+        .thumb,
+        .thumb-card,
+        .review-proof,
+        .process-card,
+        .faq-item,
+        .proof-cell,
+        .ba-card {
+            transition-duration: 0.82s !important;
+            transition-timing-function: var(--motion-premium) !important;
+        }
+
+        .btn::after,
+        .btn-outline::after,
+        .btn-whatsapp::after,
+        .nav-cta::after {
+            transition: left 1.55s var(--motion-premium) !important;
+        }
+
+        .hero-visual {
+            animation: softFloat 13s ease-in-out infinite !important;
+        }
+
+        .marquee-track {
+            animation-duration: 135s !important;
+            animation-timing-function: linear !important;
+            animation-iteration-count: infinite !important;
+            animation-play-state: running !important;
+        }
+
+        @media (max-width: 760px) {
+            .reveal {
+                transform: translate3d(0, 20px, 0) scale(0.995);
+                transition:
+                    opacity 1.55s var(--motion-premium),
+                    transform 1.55s var(--motion-premium);
+            }
+
+            .reveal.fade-left,
+            .reveal.fade-right,
+            .reveal.zoom-in {
+                transform: translate3d(0, 20px, 0) scale(0.995);
+            }
+
+            .reveal.show,
+            .reveal.fade-left.show,
+            .reveal.fade-right.show,
+            .reveal.zoom-in.show {
+                transform: translate3d(0, 0, 0) scale(1);
+            }
+
+            .hero-visual {
+                animation: none !important;
+            }
+
+            .marquee-track {
+                animation-duration: 155s !important;
+            }
+
+            .btn,
+            .btn-outline,
+            .btn-whatsapp,
+            .nav-cta,
+            .load-more,
+            .thumb,
+            .thumb-card,
+            .review-proof,
+            .process-card,
+            .faq-item {
+                transition-duration: 0.65s !important;
+            }
+        }
+
+    
+        /* Final slower fade-only tuning */
+        .reveal {
+            transition:
+                opacity 2.75s var(--motion-premium),
+                transform 2.75s var(--motion-premium) !important;
+        }
+
+        @media (max-width: 760px) {
+            .reveal {
+                transition:
+                    opacity 1.95s var(--motion-premium),
+                    transform 1.95s var(--motion-premium) !important;
+            }
+        }
+
     </style>
 </head>
 
@@ -3516,11 +3827,17 @@
         <div class="contact-page-inner">
             <button class="contact-close" type="button" aria-label="Close contact form">&times;</button>
             <h2>Contact</h2>
-            <form class="contact-form" id="contactForm">
-                <input type="text" id="contactName" name="name" placeholder="Your Name" autocomplete="name" required="">
-                <input type="email" id="contactEmail" name="email" placeholder="Your Email" autocomplete="email" required="">
-                <textarea id="contactMessage" name="message" placeholder="Your Message" required=""></textarea>
-                <button type="submit">Send</button>
+            <form class="contact-form" id="contactForm" action="https://formsubmit.co/ajax/shahalamd293@gmail.com" method="POST">
+                <input type="hidden" name="_subject" value="New thumbnail project message from Abdullah Thumbnails">
+                <input type="hidden" name="_template" value="table">
+                <input type="hidden" name="_captcha" value="false">
+
+                <input type="text" id="contactName" placeholder="Your Name" autocomplete="name" required="" name="name" autocomplete="name" required>
+                <input type="email" id="contactEmail" placeholder="Your Email" autocomplete="email" required="" name="email" autocomplete="email" type="email" required>
+                <textarea id="contactMessage" placeholder="Your Message" required="" name="message" required></textarea>
+                <button type="submit">Send Message</button>
+            
+                <p class="contact-form-status" id="contactFormStatus" role="status" aria-live="polite"></p>
             </form>
         </div>
     </div>
@@ -4117,6 +4434,145 @@
             });
         }
     </script>
+
+    <script>
+        (function () {
+            const form = document.getElementById("contactForm");
+            const status = document.getElementById("contactFormStatus");
+
+            if (!form || !status) return;
+
+            const successMessage = "Thank you for your interest. I will reply as soon as possible. You can also message me directly on WhatsApp for a faster response.";
+
+            form.addEventListener("submit", async function (event) {
+                event.preventDefault();
+
+                const submitButton = form.querySelector('button[type="submit"]');
+                const originalButtonText = submitButton ? submitButton.textContent : "";
+
+                status.className = "contact-form-status";
+                status.textContent = "";
+
+                if (submitButton) {
+                    submitButton.disabled = true;
+                    submitButton.textContent = "Sending...";
+                }
+
+                try {
+                    const response = await fetch(form.action, {
+                        method: "POST",
+                        body: new FormData(form),
+                        headers: {
+                            "Accept": "application/json"
+                        }
+                    });
+
+                    if (!response.ok) {
+                        throw new Error("Message could not be sent.");
+                    }
+
+                    form.reset();
+                    status.textContent = successMessage;
+                    status.className = "contact-form-status show success";
+                } catch (error) {
+                    status.innerHTML = 'Message could not be sent automatically. Please email <strong>shahalamd293@gmail.com</strong> or message me on WhatsApp for a faster reply.';
+                    status.className = "contact-form-status show error";
+                } finally {
+                    if (submitButton) {
+                        submitButton.disabled = false;
+                        submitButton.textContent = originalButtonText || "Send";
+                    }
+                }
+            });
+        })();
+    </script>
+
+
+    <script>
+        /* Premium reveal and scroll helper */
+        (function () {
+            const revealItems = document.querySelectorAll(".reveal");
+            if (revealItems.length) {
+                revealItems.forEach((el, index) => {
+                    const isMobile = window.matchMedia("(max-width: 760px)").matches;
+                    const step = isMobile ? 85 : 160;
+                    const cap = isMobile ? 320 : 720;
+                    el.style.transitionDelay = `${Math.min((index % 6) * step, cap)}ms`;
+                });
+
+                const clearDelay = (el) => {
+                    window.setTimeout(() => {
+                        el.style.transitionDelay = "";
+                    }, window.matchMedia("(max-width: 760px)").matches ? 950 : 1300);
+                };
+
+                const observer = new IntersectionObserver((entries) => {
+                    entries.forEach((entry) => {
+                        if (!entry.isIntersecting) return;
+                        entry.target.classList.add("show");
+                        clearDelay(entry.target);
+                        observer.unobserve(entry.target);
+                    });
+                }, {
+                    threshold: 0.12,
+                    rootMargin: "0px 0px -8% 0px"
+                });
+
+                revealItems.forEach((el) => {
+                    if (!el.classList.contains("show")) observer.observe(el);
+                });
+            }
+
+            const progress = document.getElementById("scrollProgress");
+            const topbar = document.querySelector(".topbar");
+            let ticking = false;
+
+            function updateScrollUI() {
+                const scrollTop = window.scrollY || document.documentElement.scrollTop;
+                const maxScroll = document.documentElement.scrollHeight - window.innerHeight;
+                const amount = maxScroll > 0 ? scrollTop / maxScroll : 0;
+
+                if (progress) progress.style.transform = `scaleX(${amount})`;
+                if (topbar) topbar.classList.toggle("is-scrolled", scrollTop > 12);
+
+                ticking = false;
+            }
+
+            window.addEventListener("scroll", () => {
+                if (ticking) return;
+                ticking = true;
+                window.requestAnimationFrame(updateScrollUI);
+            }, { passive: true });
+
+            window.addEventListener("resize", () => {
+                window.requestAnimationFrame(updateScrollUI);
+            }, { passive: true });
+
+            updateScrollUI();
+        })();
+    </script>
+
+
+    <script>
+        (function () {
+            function restartPortfolioSlider() {
+                document.querySelectorAll(".marquee-track").forEach((track) => {
+                    track.classList.remove("paused");
+                    track.style.animation = "none";
+                    track.offsetHeight;
+                    track.style.animation = "";
+                    track.style.animationPlayState = "running";
+                });
+            }
+
+            window.addEventListener("load", restartPortfolioSlider, { once: true });
+            window.addEventListener("pageshow", restartPortfolioSlider);
+            document.addEventListener("visibilitychange", () => {
+                if (!document.hidden) restartPortfolioSlider();
+            });
+        })();
+    </script>
+
 </body>
 
 </html>
